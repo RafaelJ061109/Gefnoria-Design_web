@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feat/faq</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <section class="min-h-screen flex items-center justify-center bg-base-100 p-4">
+
+        <div class="card w-full max-w-md bg-[#233673] shadow-xl">
+
+            <div class="card-body">
+
+                <h2 class="card-title justify-center text-3xl text-white">
+                    Solicitar orçamento
+                </h2>
+
+                <p class="text-center text-white/80 mb-4">
+                    Preencha os campos abaixo para continuarmos avançando
+                    com o seu orçamento.
+                </p>
+
+                <form class="space-y-4">
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-[#B2C6FF]">
+                                Nome
+                            </span>
+                        </label>
+
+                        <input type="text" placeholder="Digite seu nome"
+                            class="input input-bordered w-full bg-[#4061A3] text-white placeholder:text-white/70 border-none" />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-[#B2C6FF]">
+                                Telefone
+                            </span>
+                        </label>
+
+                        <input type="tel" placeholder="Digite um número de telefone"
+                            class="input input-bordered w-full bg-[#4061A3] text-white placeholder:text-white/70 border-none" />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-[#B2C6FF]">
+                                E-mail
+                            </span>
+                        </label>
+
+                        <input type="email" placeholder="Digite seu e-mail"
+                            class="input input-bordered w-full bg-[#4061A3] text-white placeholder:text-white/70 border-none" />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text text-[#B2C6FF]">
+                                Cidade/UF
+                            </span>
+                        </label>
+
+                        <input type="text" placeholder="Digite a cidade e estado de instalação da piscina"
+                            class="input input-bordered w-full bg-[#4061A3] text-white placeholder:text-white/70 border-none" />
+                    </div>
+
+                    <button type="submit"
+                        class="btn w-full mt-4 bg-[#FC8A33] text-white border-none hover:bg-[#e88d4d]">
+                        SOLICITAR ATENDIMENTO
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
