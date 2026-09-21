@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linhas de Piscina — DaisyUI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<style>
+  body { background: #f7f9fc; }
+  .linhas-title { color: #1e3a8a; }
+  .carousel::-webkit-scrollbar { height: 6px; }
+  .carousel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+</style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
+<body class="min-h-screen py-12 px-4 md:px-10">
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/princesa.png" alt="Linha Princesa" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Princesa</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Compactas, possuem degraus internos, bancos e bordas rebaixadas para deixar a instalação mais fácil e segura.</p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/condessa.png" alt="Linha Condessa" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Condessa</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Compactas, possuem degraus internos, bancos e bordas rebaixadas para deixar a instalação mais fácil e segura.</p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/imperatriz.png" alt="Linha Imperatriz" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Imperatriz</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Amplo espaço interno sem deixar o conforto de lado. Esta linha conta com escadas internas e banco lateral, que deixam o visual mais moderno.</p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/duquesa.png" alt="Linha Duquesa" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Duquesa</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Ideais para aproveitar o amplo espaço interno com conforto e a diversão. As piscinas possuem escadas de canto e banco interno.</p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/marquesa.png" alt="Linha Marquesa" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Marquesa</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Para a família desfrutar de muito espaço interno e conforto com suas escadas e degraus internos.</p>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="rounded-2xl overflow-hidden w-full">
+          <img src="assents/img/viscondessa.png" alt="Linha Viscondessa" class="w-full h-full object-cover">
+        </div>
+        <h3 class="linhas-title font-bold mt-3">Linha Viscondessa</h3>
+        <p class="text-sm text-slate-500 mt-1 leading-relaxed">Para a família desfrutar de muito espaço interno e conforto com suas escadas e degraus internos.</p>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
