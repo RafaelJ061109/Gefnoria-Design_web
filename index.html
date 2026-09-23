@@ -2,63 +2,95 @@
 <html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Linhas de Piscina — DaisyUI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <style>
   body { background: #f7f9fc; }
   .linhas-title { color: #1e3a8a; }
+  .eyebrow { color: #1e88e5; letter-spacing: .08em; }
   .carousel::-webkit-scrollbar { height: 6px; }
   .carousel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
 </style>
 </head>
 <body class="min-h-screen py-12 px-4 md:px-10">
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+  <div class="max-w-6xl mx-auto">
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+    <!-- Cabeçalho -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <p class="eyebrow text-xs font-bold uppercase">Nossos modelos de piscinas</p>
+        <h2 class="linhas-title text-2xl md:text-3xl font-bold mt-2 leading-snug">
+          Escolha o melhor formato<br class="hidden md:block"> para o seu espaço
+        </h2>
+      </div>
+
+      <div class="flex items-start gap-4 max-w-sm">
+        <p class="text-sm text-slate-500 leading-relaxed">
+          São diversos modelos que estão disponíveis para sua necessidade. Consulte a lista de modelos de piscinas abaixo e descubra qual se encaixa melhor no seu espaço.
+        </p>
+        <div class="flex gap-2 shrink-0">
+          <button type="button" id="prevBtn" class="btn btn-circle btn-sm btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" id="nextBtn" class="btn btn-circle btn-sm btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrossel de linhas -->
+    <div id="carousel" class="carousel carousel-center gap-6 overflow-x-auto scroll-smooth pb-2">
+
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/princesa.png" alt="Linha Princesa" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Princesa</h3>
         <p class="text-sm text-slate-500 mt-1 leading-relaxed">Compactas, possuem degraus internos, bancos e bordas rebaixadas para deixar a instalação mais fácil e segura.</p>
       </div>
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/condessa.png" alt="Linha Condessa" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Condessa</h3>
         <p class="text-sm text-slate-500 mt-1 leading-relaxed">Compactas, possuem degraus internos, bancos e bordas rebaixadas para deixar a instalação mais fácil e segura.</p>
       </div>
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/imperatriz.png" alt="Linha Imperatriz" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Imperatriz</h3>
         <p class="text-sm text-slate-500 mt-1 leading-relaxed">Amplo espaço interno sem deixar o conforto de lado. Esta linha conta com escadas internas e banco lateral, que deixam o visual mais moderno.</p>
       </div>
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/duquesa.png" alt="Linha Duquesa" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Duquesa</h3>
         <p class="text-sm text-slate-500 mt-1 leading-relaxed">Ideais para aproveitar o amplo espaço interno com conforto e a diversão. As piscinas possuem escadas de canto e banco interno.</p>
       </div>
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/marquesa.png" alt="Linha Marquesa" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Marquesa</h3>
         <p class="text-sm text-slate-500 mt-1 leading-relaxed">Para a família desfrutar de muito espaço interno e conforto com suas escadas e degraus internos.</p>
       </div>
 
-      <div class="flex flex-col">
-        <div class="rounded-2xl overflow-hidden w-full">
+      <div class="carousel-item flex flex-col w-40 md:w-48">
+        <div class="rounded-2xl overflow-hidden w-full aspect-square">
           <img src="assents/img/viscondessa.png" alt="Linha Viscondessa" class="w-full h-full object-cover">
         </div>
         <h3 class="linhas-title font-bold mt-3">Linha Viscondessa</h3>
@@ -66,7 +98,29 @@
       </div>
 
     </div>
+
+    <!-- Botão do catálogo -->
+    <div class="mt-8">
+      <a href="assets/docs/catalogo.pdf" class="btn btn-outline btn-primary btn-sm gap-2" download>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
+        </svg>
+        Baixe nosso catálogo
+      </a>
+    </div>
+
   </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const step = 220;
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      carousel.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      carousel.scrollBy({ left: step, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>
