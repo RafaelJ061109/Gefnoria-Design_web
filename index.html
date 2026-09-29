@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace-2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="min-h-screen bg-white">
+
+    <main class="w-full">
+
+
+        <section class="w-full max-w-[1400px] mx-auto px-5 md:px-10 py-8">
+
+            <div class="card bg-base-200 rounded-2xl shadow-sm">
+
+                <div class="card-body p-6 md:p-8">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                        <div>
+
+                            <h2 class="text-lg font-bold mb-10">
+                                Quantidade de créditos para compra
+                            </h2>
+
+                            <div class="flex items-center justify-center md:justify-start gap-5">
+
+                                <!-- Botão diminuir -->
+                                <button id="btn-menos" class="btn btn-circle btn-outline btn-info btn-sm text-xl"
+                                    aria-label="Diminuir quantidade">
+                                    -
+
+                                </button>
+
+                                <div class="flex flex-col items-center">
+
+                                    <span id="quantidade" class="text-5xl font-bold">
+                                        100
+                                    </span>
+
+                                    <div class="w-48 md:w-64 border-b border-base-300 mt-4"></div>
+
+                                    <span class="text-sm text-base-content/50 mt-5">
+                                        Digite o valor aproximado
+                                    </span>
+
+                                </div>
+
+                                <!-- Botão aumentar -->
+                                <button id="btn-mais" class="btn btn-circle btn-outline btn-info btn-sm text-xl"
+                                    aria-label="Aumentar quantidade">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2 class="text-lg font-bold mb-10">
+                                Total em reais
+                            </h2>
+
+                            <p id="total" class="text-4xl md:text-5xl font-bold">
+                                R$20.000,00
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-14">
+
+                        <div class="flex items-center gap-3 border-b border-base-300 pb-4 cursor-pointer">
+
+                            <h3 class="text-lg font-bold">
+                                Mais informações sobre o produto
+                            </h3>
+
+                            <span class="text-info text-xl">
+                                ⌄
+                            </span>
+
+                        </div>
+
+
+                        <p class="text-sm text-base-content/50 mt-4
+                                   max-w-6xl leading-relaxed">
+
+                            <strong class="text-base-content/70">
+                                ATENÇÃO:
+                            </strong>
+
+                            A transferência dos pontos comprados para programas
+                            parceiros (Milhas) depende da elegibilidade do seu
+                            cartão de crédito. Consulte os cartões elegíveis na
+                            página do produto a partir do menu Viagens -
+                            Programas Parceiros.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-base-300 mt-8">
+
+
+            <div class="flex flex-col-reverse sm:flex-row
+                       justify-between items-stretch sm:items-center
+                       gap-4 mt-8">
+
+                <button class="btn btn-ghost text-[#104F98] font-bold
+                           justify-start sm:justify-center ">
+
+                    Voltar
+
+                </button>
+                <div class="flex flex-col sm:flex-row gap-3">
+
+                    <button class=" text-[#104F98] btn btn-outline
+                               px-8">
+
+                        Adicionar ao carrinho
+
+                    </button>
+
+                    <button class="btn bg-[#104F98] btn-info text-white px-10">
+
+                        Continuar
+
+                        <span class="text-xl">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Quantidade inicial
+        let quantidade = 100;
+
+        // Valor de cada crédito
+        const valorPorCredito = 200;
+
+        // Elementos
+        const quantidadeElemento =
+            document.getElementById("quantidade");
+
+        const totalElemento =
+            document.getElementById("total");
+
+        const btnMenos =
+            document.getElementById("btn-menos");
+
+        const btnMais =
+            document.getElementById("btn-mais");
+
+
+        // Formata o valor para R$
+        function formatarReal(valor) {
+
+            return valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+        }
+
+
+        // Atualiza a tela
+        function atualizar() {
+
+            quantidadeElemento.textContent =
+                quantidade;
+
+            const total =
+                quantidade * valorPorCredito;
+
+            totalElemento.textContent =
+                formatarReal(total);
+
+        }
+
+
+        // diminuir qt
+        btnMenos.addEventListener("click", function () {
+
+            if (quantidade > 1) {
+
+                quantidade--;
+
+                atualizar();
+
+            }
+
+        });
+
+
+        // Aumentar
+        btnMais.addEventListener("click", function () {
+
+            quantidade++;
+
+            atualizar();
+
+        });
+
+
+        //  Atualização inicial
+        atualizar();
+
+    </script>
+
+</body>
+
+</html>
