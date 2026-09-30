@@ -95,14 +95,14 @@
               <ul class="mt-3 gap-1 pl-[25px]">
 
                 <li>
-                  <a href="dashboard.html"
+                  <a href="index.html"
                     class="min-h-0 rounded-none bg-transparent px-0 py-[6px] text-[#888] hover:bg-transparent hover:text-[#0758a6]">
                     Dashboard
                   </a>
                 </li>
 
                 <li>
-                  <a href="compra.html"
+                  <a href="index2.html"
                     class="min-h-0 rounded-none bg-transparent px-0 py-[6px] font-bold text-[#0758a6] hover:bg-transparent hover:text-[#0758a6]">
                     Compra de créditos
                   </a>
@@ -340,40 +340,6 @@
     </div>
 
   </div>
-
-  <!-- SCRIPT PARA INTERAÇÃO DA QUANTIDADE E PREÇO -->
-  <script>
-    const precoPorCredito = 200; // R$ 200,00 por crédito (100 * 200 = R$ 20.000,00)
-    let qtd = 100;
-    const minQtd = 100;
-    const maxQtd = 2000;
-    const passo = 50;
-
-    const elQtd = document.getElementById('quantidade');
-    const elTotal = document.getElementById('total');
-    const btnMais = document.getElementById('btn-mais');
-    const btnMenos = document.getElementById('btn-menos');
-
-    function atualizarTela() {
-      elQtd.textContent = qtd;
-      const total = qtd * precoPorCredito;
-      elTotal.textContent = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    }
-
-    btnMais.addEventListener('click', () => {
-      if (qtd + passo <= maxQtd) {
-        qtd += passo;
-        atualizarTela();
-      }
-    });
-
-    btnMenos.addEventListener('click', () => {
-      if (qtd - passo >= minQtd) {
-        qtd -= passo;
-        atualizarTela();
-      }
-    });
-  </script>
 
 </body>
 
