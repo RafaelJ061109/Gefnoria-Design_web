@@ -4,95 +4,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Workspace-2</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="min-h-screen bg-white">
 
-    <main class="w-full">
+    <main class="min-h-screen flex flex-col">
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="w-full max-w-6xl mx-auto px-6 py-6 flex-1">
+
+            <!-- CABEÇALHO -->
+            <header>
+
+                <!-- Breadcrumb -->
+                <div class="breadcrumbs text-sm pb-2">
+                    <ul>
+                        <li><a href="#" class="underline hover:text-[#104F98]">Loja de Projetos</a></li>
+                        <li><a href="#" class="underline hover:text-[#104F98]">Comprar Créditos</a></li>
+                        <li>Compra de créditos</li>
+                    </ul>
+                </div>
+
+                <h1 class="text-2xl font-bold">
+                    Compra de pontos base
+                </h1>
+
+                <div class="divider my-2"></div>
+
+            </header>
 
 
-        <section class="w-full max-w-[1400px] mx-auto px-5 md:px-10 py-8">
+            <!-- LIMITE + INFORMAÇÕES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
-            <div class="card bg-base-200 rounded-2xl shadow-sm">
+                <!-- LIMITE MENSAL -->
+                <div class="card bg-base-200 shadow-sm">
 
-                <div class="card-body p-6 md:p-8">
+                    <div class="card-body p-5">
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <h2 class="font-bold text-base">
+                            Limite mensal
+                        </h2>
 
-                        <div>
+                        <p class="text-sm mt-1">
+                            Confira a quantidade de pontos disponível para compra
+                        </p>
 
-                            <h2 class="text-lg font-bold mb-10">
-                                Quantidade de créditos para compra
-                            </h2>
+                        <!-- Barra de progresso -->
+                        <progress class="progress progress-info w-full mt-1" value="115" max="200">
+                        </progress>
 
-                            <div class="flex items-center justify-center md:justify-start gap-5">
+                        <!-- Valores -->
+                        <div class="flex justify-between text-xs mt-1">
 
-                                <!-- Botão diminuir -->
-                                <button id="btn-menos" class="btn btn-circle btn-outline btn-info btn-sm text-xl"
-                                    aria-label="Diminuir quantidade">
-                                    -
+                            <div>
+                                <p class="text-base-content/50">
+                                    Comprado esse mês
+                                </p>
 
-                                </button>
+                                <strong>
+                                    100 créditos
+                                </strong>
+                            </div>
 
-                                <div class="flex flex-col items-center">
+                            <div class="text-right">
 
-                                    <span id="quantidade" class="text-5xl font-bold">
-                                        100
-                                    </span>
+                                <p class="text-base-content/50">
+                                    Seu limite mensal
+                                </p>
 
-                                    <div class="w-48 md:w-64 border-b border-base-300 mt-4"></div>
-
-                                    <span class="text-sm text-base-content/50 mt-5">
-                                        Digite o valor aproximado
-                                    </span>
-
-                                </div>
-
-                                <!-- Botão aumentar -->
-                                <button id="btn-mais" class="btn btn-circle btn-outline btn-info btn-sm text-xl"
-                                    aria-label="Aumentar quantidade">
-                                    +
-                                </button>
+                                <strong>
+                                    2.000 créditos
+                                </strong>
 
                             </div>
 
                         </div>
 
+                    </div>
 
+                </div>
+
+
+                <!-- INFORMAÇÕES -->
+                <div class="card bg-base-200 shadow-sm">
+
+                    <div class="card-body p-5">
+
+                        <h2 class="font-bold text-base mb-1">
+                            Informações
+                        </h2>
+
+                        <div class="space-y-2 text-sm">
+
+                            <div class="flex items-center gap-2">
+                                <img src="img/card.png" alt="Cartão" class="w-4 h-4">
+
+                                <span>
+                                    Valor mínimo de
+                                    <strong>100 créditos</strong>
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <img src="img/calendar.png" alt="Calendário" class="w-4 h-4">
+
+                                <span>
+                                    Validade
+                                    <strong>24 meses</strong>
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <img src="img/money.png" alt="Dinheiro" class="w-4 h-4">
+
+                                <span>
+                                    Limite de compra mensal
+                                    <strong>2.000 créditos</strong>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTIDADE + TOTAL -->
+            <div class="card bg-base-200 shadow-sm">
+
+                <div class="card-body p-6">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                        <!-- QUANTIDADE -->
                         <div>
 
-                            <h2 class="text-lg font-bold mb-10">
+                            <h2 class="font-bold text-base mb-8">
+                                Quantidade de créditos para compra
+                            </h2>
+
+                            <div class="flex items-center gap-5">
+
+                                <!-- MENOS -->
+                                <button id="btn-menos" class="btn btn-circle btn-outline btn-info btn-sm"
+                                    aria-label="Diminuir quantidade">
+
+                                    −
+
+                                </button>
+
+
+                                <!-- VALOR -->
+                                <div class="flex flex-col items-center">
+
+                                    <span id="quantidade" class="text-4xl font-bold">
+
+                                        100
+
+                                    </span>
+
+                                    <div class="w-36 border-b border-base-300 mt-2"></div>
+
+                                </div>
+
+
+                                <!-- MAIS -->
+                                <button id="btn-mais" class="btn btn-circle btn-outline btn-info btn-sm"
+                                    aria-label="Aumentar quantidade">
+
+                                    +
+
+                                </button>
+
+                            </div>
+
+                            <p class="text-xs text-base-content/60 mt-3 ml-16">
+                                Digite o valor aproximado
+                            </p>
+
+                        </div>
+
+
+                        <!-- TOTAL -->
+                        <div>
+
+                            <h2 class="font-bold text-base mb-8">
                                 Total em reais
                             </h2>
 
-                            <p id="total" class="text-4xl md:text-5xl font-bold">
+                            <p id="total" class="text-4xl font-bold">
+
                                 R$20.000,00
+
                             </p>
 
                         </div>
 
                     </div>
 
-                    <div class="mt-14">
+                </div>
 
-                        <div class="flex items-center gap-3 border-b border-base-300 pb-4 cursor-pointer">
-
-                            <h3 class="text-lg font-bold">
-                                Mais informações sobre o produto
-                            </h3>
-
-                            <span class="text-info text-xl">
-                                ⌄
-                            </span>
-
-                        </div>
+            </div>
 
 
-                        <p class="text-sm text-base-content/50 mt-4
-                                   max-w-6xl leading-relaxed">
+            <!-- MAIS INFORMAÇÕES -->
+            <div class="mt-14">
+
+                <div class="collapse collapse-arrow p-0">
+
+                    <input type="checkbox" checked />
+
+                    <div class="collapse-title font-bold text-sm px-0 py-2 min-h-0">
+                        Mais informações sobre o produto
+                    </div>
+
+                    <div class="collapse-content px-0">
+
+                        <p class="text-xs text-base-content/50 max-w-4xl">
 
                             <strong class="text-base-content/70">
                                 ATENÇÃO:
@@ -112,124 +252,41 @@
 
             </div>
 
-            <hr class="border-base-300 mt-8">
+        </section>
 
 
-            <div class="flex flex-col-reverse sm:flex-row
-                       justify-between items-stretch sm:items-center
-                       gap-4 mt-8">
+        <!-- RODAPÉ / BOTÕES -->
+        <footer class="border-t border-base-300 bg-white">
 
-                <button class="btn btn-ghost text-[#104F98] font-bold
-                           justify-start sm:justify-center ">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex
+                        flex-col-reverse sm:flex-row
+                        justify-between items-center gap-4">
 
+                <!-- VOLTAR -->
+                <button class="btn btn-ghost text-[#104F98] font-bold">
                     Voltar
-
                 </button>
-                <div class="flex flex-col sm:flex-row gap-3">
 
-                    <button class=" text-[#104F98] btn btn-outline
-                               px-8">
 
+                <!-- BOTÕES DIREITA -->
+                <div class="flex gap-2">
+
+                    <button class="btn btn-outline text-[#104F98]">
                         Adicionar ao carrinho
-
                     </button>
 
-                    <button class="btn bg-[#104F98] btn-info text-white px-10">
-
+                    <button class="btn bg-[#104F98] text-white border-[#104F98]">
                         Continuar
-
-                        <span class="text-xl">
-                            →
-                        </span>
-
+                        <span class="text-lg">→</span>
                     </button>
 
                 </div>
 
             </div>
 
-        </section>
+        </footer>
 
     </main>
-
-
-    <!-- JAVASCRIPT -->
-    <script>
-
-        // Quantidade inicial
-        let quantidade = 100;
-
-        // Valor de cada crédito
-        const valorPorCredito = 200;
-
-        // Elementos
-        const quantidadeElemento =
-            document.getElementById("quantidade");
-
-        const totalElemento =
-            document.getElementById("total");
-
-        const btnMenos =
-            document.getElementById("btn-menos");
-
-        const btnMais =
-            document.getElementById("btn-mais");
-
-
-        // Formata o valor para R$
-        function formatarReal(valor) {
-
-            return valor.toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL"
-            });
-
-        }
-
-
-        // Atualiza a tela
-        function atualizar() {
-
-            quantidadeElemento.textContent =
-                quantidade;
-
-            const total =
-                quantidade * valorPorCredito;
-
-            totalElemento.textContent =
-                formatarReal(total);
-
-        }
-
-
-        // diminuir qt
-        btnMenos.addEventListener("click", function () {
-
-            if (quantidade > 1) {
-
-                quantidade--;
-
-                atualizar();
-
-            }
-
-        });
-
-
-        // Aumentar
-        btnMais.addEventListener("click", function () {
-
-            quantidade++;
-
-            atualizar();
-
-        });
-
-
-        //  Atualização inicial
-        atualizar();
-
-    </script>
 
 </body>
 
