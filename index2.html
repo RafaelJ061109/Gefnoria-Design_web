@@ -1,292 +1,379 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compra de Créditos | AgênciaWeb</title>
 
-    <title>Workspace-2</title>
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html,
+    body {
+      min-height: 100%;
+    }
 
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    body {
+      margin: 0;
+      background: #f4f3f3;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #555;
+    }
+  </style>
 </head>
 
-<body class="min-h-screen bg-white">
+<body>
 
-    <main class="min-h-screen flex flex-col">
+  <div class="mx-auto mt-[34px] min-h-[calc(100vh-46px)] w-[min(1180px,calc(100%-72px))] overflow-hidden bg-white shadow-sm">
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <section class="w-full max-w-6xl mx-auto px-6 py-6 flex-1">
+    <!-- HEADER -->
+    <header class="navbar min-h-[67px] border-b border-[#dedede] bg-[#fafafa] px-[25px]">
 
-            <!-- CABEÇALHO -->
-            <header>
+      <div class="flex-1">
+        <a href="dashboard.html" class="inline-flex items-center">
+          <img src="img/logo-agenciaweb.png" alt="AgênciaWeb Escolar" class="h-auto w-[150px] object-contain" />
+        </a>
+      </div>
 
-                <!-- Breadcrumb -->
-                <div class="breadcrumbs text-sm pb-2">
-                    <ul>
-                        <li><a href="#" class="underline hover:text-[#104F98]">Loja de Projetos</a></li>
-                        <li><a href="#" class="underline hover:text-[#104F98]">Comprar Créditos</a></li>
-                        <li>Compra de créditos</li>
-                    </ul>
-                </div>
+      <div class="flex-none">
+        <div class="flex items-center gap-2">
 
-                <h1 class="text-2xl font-bold">
-                    Compra de pontos base
-                </h1>
+          <div class="avatar placeholder">
+            <div class="grid h-7 w-7 place-items-center rounded-[4px] bg-[#f4a046] text-[10px] font-bold text-white">
+              LD
+            </div>
+          </div>
 
-                <div class="divider my-2"></div>
-
-            </header>
-
-
-            <!-- LIMITE + INFORMAÇÕES -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-
-                <!-- LIMITE MENSAL -->
-                <div class="card bg-base-200 shadow-sm">
-
-                    <div class="card-body p-5">
-
-                        <h2 class="font-bold text-base">
-                            Limite mensal
-                        </h2>
-
-                        <p class="text-sm mt-1">
-                            Confira a quantidade de pontos disponível para compra
-                        </p>
-
-                        <!-- Barra de progresso -->
-                        <progress class="progress progress-info w-full mt-1" value="115" max="200">
-                        </progress>
-
-                        <!-- Valores -->
-                        <div class="flex justify-between text-xs mt-1">
-
-                            <div>
-                                <p class="text-base-content/50">
-                                    Comprado esse mês
-                                </p>
-
-                                <strong>
-                                    100 créditos
-                                </strong>
-                            </div>
-
-                            <div class="text-right">
-
-                                <p class="text-base-content/50">
-                                    Seu limite mensal
-                                </p>
-
-                                <strong>
-                                    2.000 créditos
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- INFORMAÇÕES -->
-                <div class="card bg-base-200 shadow-sm">
-
-                    <div class="card-body p-5">
-
-                        <h2 class="font-bold text-base mb-1">
-                            Informações
-                        </h2>
-
-                        <div class="space-y-2 text-sm">
-
-                            <div class="flex items-center gap-2">
-                                <img src="img/card.png" alt="Cartão" class="w-4 h-4">
-
-                                <span>
-                                    Valor mínimo de
-                                    <strong>100 créditos</strong>
-                                </span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <img src="img/calendar.png" alt="Calendário" class="w-4 h-4">
-
-                                <span>
-                                    Validade
-                                    <strong>24 meses</strong>
-                                </span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <img src="img/money.png" alt="Dinheiro" class="w-4 h-4">
-
-                                <span>
-                                    Limite de compra mensal
-                                    <strong>2.000 créditos</strong>
-                                </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+          <div class="leading-tight">
+            <div class="text-[11px] font-bold text-[#333]">
+              John Doe
             </div>
 
+            <div class="mt-[2px] text-[9px] text-[#8b8b8b]">
+              Agência Web
+            </div>
+          </div>
 
-            <!-- QUANTIDADE + TOTAL -->
-            <div class="card bg-base-200 shadow-sm">
+        </div>
+      </div>
 
-                <div class="card-body p-6">
+    </header>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="flex min-h-[calc(100vh-113px)]">
 
-                        <!-- QUANTIDADE -->
-                        <div>
+      <!-- SIDEBAR -->
+      <aside class="w-[205px] shrink-0 border-r border-[#dedede] bg-white px-[25px] pt-[25px]">
 
-                            <h2 class="font-bold text-base mb-8">
-                                Quantidade de créditos para compra
-                            </h2>
+        <h1 class="mb-6 text-[20px] font-bold text-[#505050]">
+          Canal do cliente
+        </h1>
 
-                            <div class="flex items-center gap-5">
+        <nav aria-label="Menu do cliente">
 
-                                <!-- MENOS -->
-                                <button id="btn-menos" class="btn btn-circle btn-outline btn-info btn-sm"
-                                    aria-label="Diminuir quantidade">
+          <ul class="menu w-full p-0 text-[11px]">
 
-                                    −
+            <!-- LOJA DE PROJETOS -->
+            <li class="mb-6">
 
-                                </button>
+              <div class="pointer-events-none flex min-h-0 items-center gap-2 bg-transparent p-0 text-[#747474] hover:bg-transparent">
+                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="13" height="10"></rect>
+                  <path d="M6 18H4.5A1.5 1.5 0 0 1 3 16.5V5"></path>
+                  <circle cx="17.5" cy="15.5" r="3"></circle>
+                  <path d="M17.5 14v1.7l1 .7"></path>
+                </svg>
 
+                <span>
+                  Loja de projetos
+                </span>
+              </div>
 
-                                <!-- VALOR -->
-                                <div class="flex flex-col items-center">
+              <ul class="mt-3 gap-1 pl-[25px]">
 
-                                    <span id="quantidade" class="text-4xl font-bold">
+                <li>
+                  <a href="dashboard.html"
+                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] text-[#888] hover:bg-transparent hover:text-[#0758a6]">
+                    Dashboard
+                  </a>
+                </li>
 
-                                        100
+                <li>
+                  <a href="compra.html"
+                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] font-bold text-[#0758a6] hover:bg-transparent hover:text-[#0758a6]">
+                    Compra de créditos
+                  </a>
+                </li>
 
-                                    </span>
+                <li>
+                  <a href="#"
+                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] text-[#888] hover:bg-transparent hover:text-[#0758a6]">
+                    Concluídos
+                  </a>
+                </li>
 
-                                    <div class="w-36 border-b border-base-300 mt-2"></div>
+              </ul>
 
-                                </div>
+            </li>
 
+            <!-- GESTÃO DE PROJETOS -->
+            <li class="mb-6">
+              <a href="#"
+                class="min-h-0 gap-2 rounded-none bg-transparent p-0 text-[#747474] hover:bg-transparent hover:text-[#0758a6]">
+                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 4v8l5.5 5.5"></path>
+                  <path d="M12 12h8"></path>
+                </svg>
+                Gestão de projetos
+              </a>
+            </li>
 
-                                <!-- MAIS -->
-                                <button id="btn-mais" class="btn btn-circle btn-outline btn-info btn-sm"
-                                    aria-label="Aumentar quantidade">
+            <!-- CAMPANHAS -->
+            <li>
+              <a href="#"
+                class="min-h-0 gap-2 rounded-none bg-transparent p-0 text-[#747474] hover:bg-transparent hover:text-[#0758a6]">
+                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 13h3l8-4v8l-8-4H4z"></path>
+                  <path d="M7 13v5"></path>
+                  <path d="M17 10.5 19 9"></path>
+                  <path d="M17.5 13H21"></path>
+                  <path d="M17 15.5 19 17"></path>
+                </svg>
+                Campanhas
+              </a>
+            </li>
 
-                                    +
+          </ul>
 
-                                </button>
+        </nav>
 
-                            </div>
+      </aside>
 
-                            <p class="text-xs text-base-content/60 mt-3 ml-16">
-                                Digite o valor aproximado
-                            </p>
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="flex min-w-0 flex-1 flex-col justify-between bg-white p-6">
 
-                        </div>
+        <section class="w-full">
 
-
-                        <!-- TOTAL -->
-                        <div>
-
-                            <h2 class="font-bold text-base mb-8">
-                                Total em reais
-                            </h2>
-
-                            <p id="total" class="text-4xl font-bold">
-
-                                R$20.000,00
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+          <!-- BREADCRUMB + TÍTULO -->
+          <header>
+            <div class="breadcrumbs pb-2 text-xs text-gray-500">
+              <ul>
+                <li><a href="#" class="underline hover:text-[#104F98]">Loja de Projetos</a></li>
+                <li><a href="#" class="underline hover:text-[#104F98]">Comprar Créditos</a></li>
+                <li class="font-semibold text-gray-700">Compra de créditos</li>
+              </ul>
             </div>
 
+            <h1 class="text-2xl font-bold text-[#333]">
+              Compra de pontos base
+            </h1>
 
-            <!-- MAIS INFORMAÇÕES -->
-            <div class="mt-14">
+            <div class="divider my-3"></div>
+          </header>
 
-                <div class="collapse collapse-arrow p-0">
+          <!-- LIMITE + INFORMAÇÕES -->
+          <div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
 
-                    <input type="checkbox" checked />
+            <!-- LIMITE MENSAL -->
+            <div class="card bg-base-200/60 border border-gray-200/80 shadow-xs">
+              <div class="card-body p-5">
+                <h2 class="text-base font-bold text-[#333]">
+                  Limite mensal
+                </h2>
 
-                    <div class="collapse-title font-bold text-sm px-0 py-2 min-h-0">
-                        Mais informações sobre o produto
+                <p class="mt-1 text-xs text-gray-500">
+                  Confira a quantidade de pontos disponível para compra
+                </p>
+
+                <!-- Barra de progresso -->
+                <progress class="progress progress-info mt-2 w-full" value="100" max="2000"></progress>
+
+                <!-- Valores -->
+                <div class="mt-2 flex justify-between text-xs">
+                  <div>
+                    <p class="text-gray-400">Comprado esse mês</p>
+                    <strong class="text-gray-700">100 créditos</strong>
+                  </div>
+
+                  <div class="text-right">
+                    <p class="text-gray-400">Seu limite mensal</p>
+                    <strong class="text-gray-700">2.000 créditos</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- INFORMAÇÕES -->
+            <div class="card bg-base-200/60 border border-gray-200/80 shadow-xs">
+              <div class="card-body p-5">
+                <h2 class="mb-2 text-base font-bold text-[#333]">
+                  Informações
+                </h2>
+
+                <div class="space-y-2 text-xs text-gray-600">
+                  <div class="flex items-center gap-2">
+                    <img src="img/card.png" alt="Cartão" class="h-4 w-4 object-contain" />
+                    <span>Valor mínimo de <strong>100 créditos</strong></span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="img/calendar.png" alt="Calendário" class="h-4 w-4 object-contain" />
+                    <span>Validade <strong>24 meses</strong></span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="img/money.png" alt="Dinheiro" class="h-4 w-4 object-contain" />
+                    <span>Limite de compra mensal <strong>2.000 créditos</strong></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- QUANTIDADE + TOTAL -->
+          <div class="card bg-base-200/60 border border-gray-200/80 shadow-xs">
+            <div class="card-body p-6">
+              <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+
+                <!-- QUANTIDADE -->
+                <div>
+                  <h2 class="mb-6 text-base font-bold text-[#333]">
+                    Quantidade de créditos para compra
+                  </h2>
+
+                  <div class="flex items-center gap-5">
+                    <!-- MENOS -->
+                    <button id="btn-menos" class="btn btn-circle btn-outline btn-info btn-sm font-bold text-lg"
+                      aria-label="Diminuir quantidade">
+                      −
+                    </button>
+
+                    <!-- VALOR -->
+                    <div class="flex flex-col items-center">
+                      <span id="quantidade" class="text-4xl font-bold text-[#333]">
+                        100
+                      </span>
+                      <div class="mt-2 w-36 border-b border-gray-300"></div>
                     </div>
 
-                    <div class="collapse-content px-0">
+                    <!-- MAIS -->
+                    <button id="btn-mais" class="btn btn-circle btn-outline btn-info btn-sm font-bold text-lg"
+                      aria-label="Aumentar quantidade">
+                      +
+                    </button>
+                  </div>
 
-                        <p class="text-xs text-base-content/50 max-w-4xl">
-
-                            <strong class="text-base-content/70">
-                                ATENÇÃO:
-                            </strong>
-
-                            A transferência dos pontos comprados para programas
-                            parceiros (Milhas) depende da elegibilidade do seu
-                            cartão de crédito. Consulte os cartões elegíveis na
-                            página do produto a partir do menu Viagens -
-                            Programas Parceiros.
-
-                        </p>
-
-                    </div>
-
+                  <p class="mt-3 text-xs text-gray-400">
+                    Valor mínimo: 100 créditos (incrementos de 50)
+                  </p>
                 </div>
 
+                <!-- TOTAL -->
+                <div>
+                  <h2 class="mb-6 text-base font-bold text-[#333]">
+                    Total em reais
+                  </h2>
+
+                  <p id="total" class="text-4xl font-bold text-[#104F98]">
+                    R$ 20.000,00
+                  </p>
+                </div>
+
+              </div>
             </div>
+          </div>
+
+          <!-- MAIS INFORMAÇÕES -->
+          <div class="mt-8">
+            <div class="collapse collapse-arrow p-0">
+              <input type="checkbox" checked />
+
+              <div class="collapse-title min-h-0 px-0 py-2 text-sm font-bold text-[#333]">
+                Mais informações sobre o produto
+              </div>
+
+              <div class="collapse-content px-0">
+                <p class="max-w-4xl text-xs leading-relaxed text-gray-500">
+                  <strong class="text-gray-700">ATENÇÃO:</strong> A transferência dos pontos comprados para programas
+                  parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na
+                  página do produto a partir do menu Viagens - Programas Parceiros.
+                </p>
+              </div>
+            </div>
+          </div>
 
         </section>
 
-
         <!-- RODAPÉ / BOTÕES -->
-        <footer class="border-t border-base-300 bg-white">
+        <footer class="mt-10 border-t border-gray-200 pt-4">
+          <div class="flex flex-col-reverse items-center justify-between gap-4 sm:flex-row">
 
-            <div class="max-w-6xl mx-auto px-6 py-4 flex
-                        flex-col-reverse sm:flex-row
-                        justify-between items-center gap-4">
+            <!-- VOLTAR -->
+            <button class="btn btn-ghost font-bold text-[#104F98]">
+              Voltar
+            </button>
 
-                <!-- VOLTAR -->
-                <button class="btn btn-ghost text-[#104F98] font-bold">
-                    Voltar
-                </button>
+            <!-- BOTÕES DIREITA -->
+            <div class="flex gap-2">
+              <button class="btn btn-outline border-[#104F98] text-[#104F98] hover:bg-[#104F98] hover:text-white">
+                Adicionar ao carrinho
+              </button>
 
-
-                <!-- BOTÕES DIREITA -->
-                <div class="flex gap-2">
-
-                    <button class="btn btn-outline text-[#104F98]">
-                        Adicionar ao carrinho
-                    </button>
-
-                    <button class="btn bg-[#104F98] text-white border-[#104F98]">
-                        Continuar
-                        <span class="text-lg">→</span>
-                    </button>
-
-                </div>
-
+              <button class="btn bg-[#104F98] text-white border-[#104F98] hover:bg-[#0d3f7a]">
+                Continuar
+                <span class="text-lg">→</span>
+              </button>
             </div>
 
+          </div>
         </footer>
 
-    </main>
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT PARA INTERAÇÃO DA QUANTIDADE E PREÇO -->
+  <script>
+    const precoPorCredito = 200; // R$ 200,00 por crédito (100 * 200 = R$ 20.000,00)
+    let qtd = 100;
+    const minQtd = 100;
+    const maxQtd = 2000;
+    const passo = 50;
+
+    const elQtd = document.getElementById('quantidade');
+    const elTotal = document.getElementById('total');
+    const btnMais = document.getElementById('btn-mais');
+    const btnMenos = document.getElementById('btn-menos');
+
+    function atualizarTela() {
+      elQtd.textContent = qtd;
+      const total = qtd * precoPorCredito;
+      elTotal.textContent = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    btnMais.addEventListener('click', () => {
+      if (qtd + passo <= maxQtd) {
+        qtd += passo;
+        atualizarTela();
+      }
+    });
+
+    btnMenos.addEventListener('click', () => {
+      if (qtd - passo >= minQtd) {
+        qtd -= passo;
+        atualizarTela();
+      }
+    });
+  </script>
 
 </body>
 
