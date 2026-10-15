@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades | Olimpíadas da Advocacia</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #373737; font-family: Roboto, Arial, sans-serif; }
+    .site-header { min-height: 68px; background: #fff; box-shadow: 0 2px 5px rgb(0 0 0 / 8%); }
+    .header-inner { max-width: 1256px; min-height: 68px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display:flex; align-items:center; width: 150px; flex: 0 0 150px; text-decoration:none; }
+    .brand img { display:block; width: 128px; height:auto; max-height:48px; object-fit:contain; object-position:left center; }
+    .main-nav { display:flex; align-items:center; justify-content:flex-end; gap:clamp(18px,2.7vw,40px); min-height:68px; }
+    .main-nav a { text-decoration:none; color:#555; font-size:18px; font-weight:500; white-space:nowrap; }
+    .main-nav a.active { color:#009fe3; font-weight:700; }
+    main { max-width:1256px; margin:0 auto; min-height:842px; padding-top:40px; padding-bottom:60px; }
+    h1 { margin:0; font-size:29px; line-height:35px; font-weight:800; letter-spacing:-.45px; }
+    .search-row { display:flex; gap:19px; margin-top:31px; align-items:center; }
+    .search-wrap { display:flex; align-items:center; height:51px; width:min(508px,100%); border:1px solid #d8d8d8; border-radius:11px; padding:0 17px; gap:17px; color:#5a5a5a; box-shadow:0 0 1px rgb(0 0 0 / 8%); }
+    .search-wrap i { font-size:19px; flex-shrink:0; }
+    .search-wrap input { min-width:0; width:100%; border:0; outline:0; background:transparent; color:#444; font-size:17px; }
+    .search-wrap input::placeholder { color:#929292; opacity:1; }
+    .filter-wrap { position:relative; flex-shrink:0; }
+    .filter-btn { width:158px; height:51px; border:1px solid #d8d8d8; border-radius:11px; background:#fff; display:flex; align-items:center; justify-content:space-between; padding:0 17px 0 18px; font:400 16px Roboto,Arial,sans-serif; color:#454545; cursor:pointer; }
+    .filter-btn i { color:#009fe3; font-size:17px; }
+    .filter-menu { display:none; position:absolute; top:56px; left:0; width:190px; background:white; border:1px solid #ddd; border-radius:10px; box-shadow:0 8px 22px #0002; z-index:5; padding:6px; }
+    .filter-menu.open { display:block; }
+    .filter-menu button { display:block; width:100%; padding:9px 10px; border:0; background:white; text-align:left; border-radius:6px; cursor:pointer; color:#444; }
+    .filter-menu button:hover { background:#f2f2f2; }
+    .sports-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); column-gap:26px; row-gap:30px; margin-top:55px; }
+    .letter-group { min-width:0; }
+    .letter-group h2 { font-size:56px; line-height:62px; font-weight:400; margin:0 0 12px -4px; color:#373737; }
+    .sport-list { display:flex; flex-direction:column; gap:7px; }
+    .sport-link { min-height:36px; display:flex; align-items:center; gap:10px; border-radius:22px; padding:0 9px 0 0; color:#464646; font-size:20px; line-height:1.15; text-decoration:none; min-width:0; }
+    .sport-link:hover, .sport-link.selected { background:#f1f1f1; color:#009fe3; }
+    .sport-icon { width:28px; height:28px; flex:0 0 28px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#383838; color:#fff; font-size:14px; }
+    .sport-link.selected .sport-icon, .sport-link:hover .sport-icon { background:#079fe0; color:#fff; }
+    .sport-link span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+    .sport-link[hidden], .letter-group[hidden] { display:none !important; }
+    footer { min-height:105px; background:#f2f2f2; }
+    .footer-inner { max-width:1256px; min-height:105px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; color:#626262; font-size:14px; }
+    .footer-inner strong { font-weight:600; }
+    .no-results { display:none; margin-top:35px; color:#777; }
+    @media (max-width: 1360px) { .header-inner, main, .footer-inner { margin-left:5.5%; margin-right:5.5%; } }
+    @media (max-width: 1050px) {
+      .header-inner { flex-wrap:wrap; gap:0 20px; padding:10px 0; }
+      .main-nav { flex:1; gap:clamp(14px,2vw,24px); overflow-x:auto; justify-content:flex-start; }
+      .main-nav a { font-size:16px; }
+      .sports-grid { grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:24px; }
+      main { min-height:calc(100vh - 173px); }
+      .sport-link { font-size:18px; }
+    }
+    @media (max-width: 650px) {
+      .header-inner, main, .footer-inner { margin-left:20px; margin-right:20px; }
+      .header-inner { align-items:flex-start; flex-direction:column; gap:7px; }
+      .brand { height:43px; }
+      .main-nav { width:calc(100vw - 40px); min-height:36px; gap:22px; padding:0 0 5px; }
+      .main-nav a { font-size:15px; }
+      main { padding-top:28px; padding-bottom:48px; min-height:0; }
+      h1 { font-size:26px; }
+      .search-row { align-items:stretch; flex-direction:column; gap:10px; margin-top:23px; }
+      .search-wrap, .filter-btn { width:100%; }
+      .filter-menu { width:100%; }
+      .sports-grid { grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:35px; column-gap:14px; row-gap:28px; }
+      .letter-group h2 { font-size:45px; line-height:50px; margin-bottom:10px; }
+      .sport-link { font-size:15px; gap:7px; min-height:32px; }
+      .sport-icon { width:25px; height:25px; flex-basis:25px; font-size:12px; }
+      footer { min-height:90px; }
+      .footer-inner { padding:20px 0; min-height:90px; flex-direction:column; align-items:flex-start; justify-content:center; gap:8px; font-size:12px; }
+    }
+    @media (max-width: 370px) {
+      .header-inner, main, .footer-inner { margin-left:14px; margin-right:14px; }
+      .main-nav { width:calc(100vw - 28px); }
+      .sports-grid { grid-template-columns:1fr; }
+      .sport-link { font-size:17px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Olimpíadas da Advocacia — início">
+        <img src="assets/img/logo-olimpiadas.png" alt="Olimpíadas da Advocacia — CONCAD 2023">
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a class="active" href="modalidades.html" aria-current="page">Modalidades</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="cronograma.html">Cronograma</a>
+        <a href="administradores.html">Administradores</a>
+        <a href="regulamento.html">Regulamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>MODALIDADES</h1>
+    <div class="search-row">
+      <label class="search-wrap" aria-label="Pesquisar modalidade">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="sportSearch" type="search" placeholder="Pesquise aqui por uma modalidade" autocomplete="off">
+      </label>
+      <div class="filter-wrap">
+        <button class="filter-btn" id="filterToggle" type="button" aria-expanded="false">Filtrar por <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="filter-menu" id="filterMenu" role="menu">
+          <button type="button" data-filter="all">Todas as modalidades</button>
+          <button type="button" data-filter="individual">Individuais</button>
+          <button type="button" data-filter="team">Coletivas</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="sports-grid" id="sportsGrid" aria-label="Lista de modalidades">
+      <div class="letter-group" data-letter="B">
+        <h2>B</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Basquete%203x3" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-basketball" aria-hidden="true"></i></span><span>Basquete 3x3</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Beach%20Tennis" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i></span><span>Beach Tennis</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="C">
+        <h2>C</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Corrida%20de%20Rua" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span><span>Corrida de Rua</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Crossfit" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></span><span>Crossfit</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="F">
+        <h2>F</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Futebol%20Society" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-futbol" aria-hidden="true"></i></span><span>Futebol Society</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Futebol%20de%20Mesa" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-table-cells" aria-hidden="true"></i></span><span>Futebol de Mesa</span></a>
+          <a class="sport-link selected" href="modalidade.html?nome=Futebol%2011" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-futbol" aria-hidden="true"></i></span><span>Futebol 11</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Futebol%207" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span><span>Futebol 7</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Futevôlei" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span><span>Futevôlei</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="J">
+        <h2>J</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Jiu-jitsu" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-user-ninja" aria-hidden="true"></i></span><span>Jiu-jitsu</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Judô" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-medal" aria-hidden="true"></i></span><span>Judô</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="N">
+        <h2>N</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Natação" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-person-swimming" aria-hidden="true"></i></span><span>Natação</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="S">
+        <h2>S</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Sinuca" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i></span><span>Sinuca</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="T">
+        <h2>T</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Tênis" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-baseball" aria-hidden="true"></i></span><span>Tênis</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Tênis%20de%20Mesa" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i></span><span>Tênis de Mesa</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Tiro%20Esportivo" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span><span>Tiro Esportivo</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="V">
+        <h2>V</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Vôlei%20de%20Praia" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span><span>Vôlei de Praia</span></a>
+          <a class="sport-link" href="modalidade.html?nome=Vôlei%20de%20Quadra" data-kind="team"><span class="sport-icon"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span><span>Vôlei de Quadra</span></a>
+        </div>
+      </div>
+      <div class="letter-group" data-letter="X">
+        <h2>X</h2><div class="sport-list">
+          <a class="sport-link" href="modalidade.html?nome=Xadrez" data-kind="individual"><span class="sport-icon"><i class="fa-solid fa-chess" aria-hidden="true"></i></span><span>Xadrez</span></a>
+        </div>
+      </div>
+    </section>
+    <p class="no-results" id="noResults">Nenhuma modalidade encontrada.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>I Olimpíadas da Advocacia 2023</strong>
+      <span>2023 HC Sports. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('sportSearch');
+    const groups = [...document.querySelectorAll('.letter-group')];
+    const filterToggle = document.getElementById('filterToggle');
+    const filterMenu = document.getElementById('filterMenu');
+    const noResults = document.getElementById('noResults');
+    let activeFilter = 'all';
+
+    function updateSports() {
+      const term = searchInput.value.trim().toLocaleLowerCase('pt-BR');
+      let visibleCount = 0;
+      groups.forEach(group => {
+        let groupCount = 0;
+        group.querySelectorAll('.sport-link').forEach(link => {
+          const matchesText = link.innerText.toLocaleLowerCase('pt-BR').includes(term);
+          const matchesFilter = activeFilter === 'all' || link.dataset.kind === activeFilter;
+          const visible = matchesText && matchesFilter;
+          link.hidden = !visible;
+          if (visible) groupCount++;
+        });
+        group.hidden = groupCount === 0;
+        visibleCount += groupCount;
+      });
+      noResults.style.display = visibleCount ? 'none' : 'block';
+    }
+
+    searchInput.addEventListener('input', updateSports);
+    filterToggle.addEventListener('click', () => {
+      const open = filterMenu.classList.toggle('open');
+      filterToggle.setAttribute('aria-expanded', String(open));
+    });
+    filterMenu.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterToggle.innerHTML = (activeFilter === 'all' ? 'Filtrar por' : button.textContent) + ' <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+        filterMenu.classList.remove('open');
+        filterToggle.setAttribute('aria-expanded', 'false');
+        updateSports();
+      });
+    });
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.filter-wrap')) {
+        filterMenu.classList.remove('open');
+        filterToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
