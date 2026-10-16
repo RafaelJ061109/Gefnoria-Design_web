@@ -4,240 +4,495 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workspace-1 | AgênciaWeb</title>
+  <title>Workspace-1 | Olimpíadas de advocacia</title>
 
-  <!-- DaisyUI 5 + Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-  <style>
-    html,
-    body {
-      min-height: 100%;
-    }
-
-    body {
-      margin: 0;
-      background: #f4f3f3;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #555;
-    }
-  </style>
 </head>
 
-<body>
+<body class="bg-[#000000]">
+  <header class="w-full border border-gray-300 bg-base-100">
+    <div class="navbar max-w-7xl mx-auto px-4">
 
-  <div class="mx-auto mt-[34px] min-h-[calc(100vh-46px)] w-[min(1180px,calc(100%-72px))] overflow-hidden bg-white shadow-sm">
-
-    <!-- HEADER -->
-    <header class="navbar min-h-[67px] border-b border-[#dedede] bg-[#fafafa] px-[25px]">
-
-      <div class="flex-1">
-        <a href="dashboard.html" class="inline-flex items-center">
-          <img src="img/logo-agenciaweb.png" alt="AgênciaWeb Escolar" class="h-auto w-[150px] object-contain" />
+      <!-- Logo -->
+      <div class="navbar-start">
+        <a href="index.html" class="flex justify-center gap-3">
+          <img src="assets/img/logo-olimpiada.png" alt="Logo da Olimpíada de Advocacia"
+            class="h-12 w-auto hover:scale-105 duration-700">
         </a>
       </div>
 
-      <div class="flex-none">
-        <div class="flex items-center gap-2">
+      <div class="navbar-end lg:flex">
+        <ul class="gap-3 flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#cronograma">Cronograma</a></li>
+          <li><a href="#administradores">Administradores</a></li>
+          <li><a href="#regulamento">Regulamento</a></li>
+        </ul>
+      </div>
+  </header>
 
-          <div class="avatar placeholder">
-            <div class="grid h-7 w-7 place-items-center rounded-[4px] bg-[#f4a046] text-[10px] font-bold text-white">
-              LD
+  <body class="bg-black">
+    <section
+      class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 p-6 md:p-12">
+
+      <div class="max-w-xl">
+        <h1 class="text-gray-100 font-bold text-left text-4xl md:text-5xl leading-tight">
+          I Olimpíadas da Advocacia 2023
+        </h1>
+
+        <p class="text-[#E0E0E0] text-left text-sm md:text-base mt-6">
+          No dia a dia você corre, você luta, você se desdobra! E agora você pode fazer tudo isso por esporte!
+          De 03 a 08 de julho de 2023, Goiânia será a capital nacional da advocacia. Temos um encontro marcado.
+          Inscrições a partir do dia 10 de abril!
+        </p>
+
+        <button
+          class="btn btn-soft btn-sm border-none rounded-md mt-10 bg-gradient-to-tl from-[#0095D9] to-[#EE1C25] text-[#E0E0E0] font-bold hover:scale-105 duration-700">
+          Inscreva-se
+        </button>
+      </div>
+
+      <div class="shrink-0">
+        <img src="assets/img/contador.png" alt="Contador regressivo para o início das inscrições"
+          class="w-64 md:w-80 lg:w-96 h-auto">
+      </div>
+
+    </section>
+
+    <section class="flex p-6 gap-6 justify-between">
+
+      <!-- Card 1: Participe -->
+      <div class="card relative mt-5 w-62 bg-base-100 card-md shadow-sm">
+        <img src="assets/img/participe-icon.png" alt="Ícone de participante"
+          class="absolute w-10 h-10 -top-5 left-1/2 -translate-x-1/2" />
+
+        <div class="card-body">
+          <h2 class="flex card-title justify-center">Participe</h2>
+          <p class="text-center">
+            A I Olimpíadas da Advocacia é a maior competição esportiva
+            para Advogados no Brasil. A expectativa é reunir 4.000
+            atletas em 06 dias de disputas. Fique atento às informações
+            aqui no portal. Prepare-se!
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Locais -->
+      <div class="card relative mt-5 w-62 bg-base-100 card-md shadow-sm">
+        <img src="assets/img/locais-icon.png" alt="Ícone de localização"
+          class="absolute w-10 h-10 -top-5 left-1/2 -translate-x-1/2" />
+
+        <div class="card-body">
+          <h2 class="flex card-title justify-center">Locais</h2>
+          <p class="text-center">
+            A competição será realizada em Goiás, nas cidades de Goiânia
+            e Aparecida de Goiânia, em 10 centros esportivos, tendo o
+            Clube CEL/OAB como o principal local de competição.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Inscrições -->
+      <div class="card relative mt-5 w-62 bg-base-100 card-md shadow-sm">
+        <img src="assets/img/inscricoes-icon.png" alt="Ícone de inscrições"
+          class="absolute w-10 h-10 -top-5 left-1/2 -translate-x-1/2" />
+
+        <div class="card-body">
+          <h2 class="flex card-title justify-center">Inscrições</h2>
+          <p class="text-center">
+            A partir de 10 de abril, totalmente on-line, aqui mesmo no
+            portal do evento. Acompanhe as nossas atualizações aqui no
+            portal. Leia atentamente o Regulamento Geral dos jogos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Disputas -->
+      <div class="card relative mt-5 w-62 bg-base-100 card-md shadow-sm">
+        <img src="assets/img/disputas-icon.png" alt="Ícone de disputas"
+          class="absolute w-10 h-10 -top-5 left-1/2 -translate-x-1/2" />
+
+        <div class="card-body">
+          <h2 class="flex card-title justify-center">Disputas</h2>
+          <p class="text-center">
+            São 19 modalidades disponíveis na competição, individuais
+            e coletivas. Os jogos serão realizados em categorias no
+            masculino e feminino, com disputas também em categorias
+            para PCDs.
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <section class="bg-base-100 px-6 md:px-12 py-10">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+
+        <!-- Imagem -->
+        <div class="w-full md:w-2/5 shrink-0">
+          <img src="assets/img/nadador.png" alt="Nadador em uma piscina"
+            class="w-full h-64 md:h-80 object-cover rounded-lg shadow-sm">
+        </div>
+
+        <!-- Texto -->
+        <div class="flex-1">
+          <h2 class="text-[#FF161F] font-bold text-2xl mb-5">
+            Sobre a edição 2023
+          </h2>
+
+          <p class="text-sm text-gray-700 mb-5">
+            A edição 2023 da <strong>I Olimpíadas da Advocacia</strong> vem recheada de
+            grandes atrações e competições de alto nível. São <strong>19 modalidades</strong>
+            disponíveis que devem receber cerca de <strong>4.000 atletas advogados e
+              advogadas</strong> de todo o Brasil.
+          </p>
+
+          <p class="text-sm text-gray-700 leading-relaxed">
+            O Centro Esportivo e de Lazer – CEL da OAB/CASAG, em Aparecida de Goiânia-GO,
+            será o principal polo de competições do evento. Além do CEL, outros centros
+            esportivos com estruturas de alto padrão receberão disputas em várias
+            modalidades. <strong>Uma competição de alto nível</strong>, a melhor
+            infraestrutura, eventos e festividades. Venha aproveitar Goiânia e se
+            divertir com a gente!
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <section class="bg-black px-6 md:px-12 py-10">
+      <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-white font-bold text-2xl mb-8">Notícias</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+
+          <!-- Notícia principal -->
+          <article>
+            <img src="assets/img/ciclistas.png" alt="Ciclistas em uma corrida"
+              class="w-full h-56 md:h-64 object-cover rounded-md">
+
+            <div class="flex items-center gap-2 mt-4 text-[10px] font-semibold">
+              <span class="text-gray-300">17/03/2023</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-emerald-400">Organização</span>
+            </div>
+
+            <h3 class="mt-2 text-lg md:text-xl font-bold text-sky-500 leading-snug">
+              Colégio de presidentes das CAA/Concad anuncia inscrições para Olimpíadas da Advocacia
+            </h3>
+
+            <p class="mt-3 text-sm text-gray-300 leading-relaxed">
+              As datas de inscrições para a primeira edição das Olimpíadas da Advocacia foram
+              anunciadas nesta terça-feira (14/3) durante o 5º Colégio de presidentes das Caixas
+              de Assistência aos Advogados (CAA) e da Coordenação Nacional das Caixas de
+              Assistência dos Advogados (Concad) [...]
+            </p>
+          </article>
+
+          <!-- Lista de notícias menores -->
+          <div class="flex flex-col gap-6">
+
+            <article class="flex gap-4 items-center">
+              <img src="assets/img/bola-rede.png" alt="Bola em uma cesta de basquete"
+                class="w-36 sm:w-44 h-24 sm:h-28 object-cover rounded-md shrink-0">
+              <div>
+                <div class="flex items-center gap-2 text-[10px] font-semibold">
+                  <span class="text-gray-300">17/03/2023</span>
+                  <span class="text-gray-300">•</span>
+                  <span class="text-emerald-400">Organização</span>
+                </div>
+                <h3 class="mt-1 text-sm font-bold text-sky-500 leading-snug">
+                  Fique por dentro das modalidades que estarão em disputa, categorias e limites de atletas por seccional
+                </h3>
+              </div>
+            </article>
+
+            <article class="flex gap-4 items-center">
+              <img src="assets/img/corredoras.png" alt="Corredoras em uma corrida de atletismo"
+                class="w-36 sm:w-44 h-24 sm:h-28 object-cover rounded-md shrink-0">
+              <div>
+                <div class="flex items-center gap-2 text-[10px] font-semibold">
+                  <span class="text-gray-300">17/03/2023</span>
+                  <span class="text-gray-300">•</span>
+                  <span class="text-purple-400">Inscrições</span>
+                </div>
+                <h3 class="mt-1 text-sm font-bold text-sky-500 leading-snug">
+                  Olimpíada da Advocacia terá inscrições 100% digitais
+                </h3>
+              </div>
+            </article>
+
+            <article class="flex gap-4 items-center">
+              <img src="assets/img/vista-ciclismo.png" alt="Vista com ciclistas ao fundo"
+                class="w-36 sm:w-44 h-24 sm:h-28 object-cover rounded-md shrink-0">
+              <div>
+                <div class="flex items-center gap-2 text-[10px] font-semibold">
+                  <span class="text-gray-300">07/03/2023</span>
+                  <span class="text-gray-300">•</span>
+                  <span class="text-emerald-400">Organização</span>
+                </div>
+                <h3 class="mt-1 text-sm font-bold text-sky-500 leading-snug">
+                  Goiânia sediará em 2023 a primeira edição das Olimpíadas da Advocacia
+                </h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Link para todas as notícias -->
+        <a href="#noticias" class="inline-flex items-center gap-3 mt-10 text-sm text-gray-200 hover:text-white group">
+          Clique na seta e acesse todas as notícias
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-sky-500 group-hover:translate-x-1 duration-300"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SUBSTITUA o último <section> (o das imagens soltas) por tudo abaixo, ainda dentro do <body> -->
+
+    <!-- ========== DEPOIMENTOS ========== -->
+    <section class="bg-gray-100 py-12 px-6">
+      <h2 class="text-center text-2xl font-semibold text-gray-800 mb-8">Depoimentos</h2>
+
+      <div class="max-w-6xl mx-auto flex items-center gap-4">
+        <!-- Seta -->
+        <button id="dep-prev" aria-label="Depoimento anterior"
+          class="btn btn-circle btn-sm bg-[#0095D9] border-none text-white shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <!-- Carrossel -->
+        <div id="dep-track" class="carousel carousel-center gap-6 w-full scroll-smooth">
+
+          <article
+            class="carousel-item w-72 md:w-80 flex-col justify-between gap-6 rounded-md p-4 text-white bg-linear-to-tr from-[#0095D9] to-[#EE1C25]">
+            <p class="text-xs leading-relaxed">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s,
+              When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="assets/img/pessoa1.png" alt="Foto de Jefferson Thawan"
+                class="size-10 rounded-full object-cover">
+              <div>
+                <p class="text-sm font-bold">Jefferson Thawan</p>
+                <p class="text-[10px]">Função/Cargo</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carousel-item w-72 md:w-80 flex-col justify-between gap-6 rounded-md p-4 text-white bg-linear-to-tr from-[#0095D9] to-[#EE1C25]">
+            <p class="text-xs leading-relaxed">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s,
+              When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="assets/img/pessoa2.png" alt="Foto de Cesimar Xavier" class="size-10 rounded-full object-cover">
+              <div>
+                <p class="text-sm font-bold">Cesimar Xavier</p>
+                <p class="text-[10px]">Função/Cargo</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="carousel-item w-72 md:w-80 flex-col justify-between gap-6 rounded-md p-4 text-white bg-linear-to-tr from-[#0095D9] to-[#EE1C25]">
+            <p class="text-xs leading-relaxed">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s,
+              When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="assets/img/pessoa3.png" alt="Foto de Zadoque" class="size-10 rounded-full object-cover">
+              <div>
+                <p class="text-sm font-bold">Zadoque</p>
+                <p class="text-[10px]">Função/Cargo</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div id="dep-dots" class="flex justify-center gap-2 mt-6" aria-hidden="true">
+        <span class="size-1.5 rounded-full bg-gray-300"></span>
+        <span class="size-1.5 rounded-full bg-gray-300"></span>
+        <span class="size-1.5 rounded-full bg-gray-300"></span>
+      </div>
+    </section>
+
+    <!-- ========== DÚVIDAS FREQUENTES ========== -->
+    <section class="bg-white py-12 px-6">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-center text-2xl font-semibold text-[#FF161F]">Dúvidas Frequentes</h2>
+        <p class="text-center text-sm text-gray-600 mt-4 mb-8">
+          Dúvidas frequentemente questionadas por usuários que acessam a página
+        </p>
+
+        <div class="border border-gray-200 rounded-md overflow-hidden">
+
+          <div class="collapse collapse-arrow rounded-none">
+            <input type="radio" name="faq" class="peer" checked />
+            <div class="collapse-title text-sm font-semibold peer-checked:bg-neutral peer-checked:text-neutral-content">
+              O evento dá algum tipo de premiação para os vencedores?
+            </div>
+            <div class="collapse-content text-xs text-gray-600">
+              <p class="pt-3">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
             </div>
           </div>
 
-          <div class="leading-tight">
-            <div class="text-[11px] font-bold text-[#333]">
-              John Doe
+          <div class="collapse collapse-arrow rounded-none border-t border-gray-200">
+            <input type="radio" name="faq" class="peer" />
+            <div class="collapse-title text-xs peer-checked:bg-neutral peer-checked:text-neutral-content">Where does it
+              come from?</div>
+            <div class="collapse-content text-xs text-gray-600">
+              <p class="pt-3">Resposta de exemplo.</p>
             </div>
+          </div>
 
-            <div class="mt-[2px] text-[9px] text-[#8b8b8b]">
-              Agência Web
+          <div class="collapse collapse-arrow rounded-none border-t border-gray-200">
+            <input type="radio" name="faq" class="peer" />
+            <div class="collapse-title text-xs peer-checked:bg-neutral peer-checked:text-neutral-content">Where can I
+              get some?</div>
+            <div class="collapse-content text-xs text-gray-600">
+              <p class="pt-3">Resposta de exemplo.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow rounded-none border-t border-gray-200">
+            <input type="radio" name="faq" class="peer" />
+            <div class="collapse-title text-xs peer-checked:bg-neutral peer-checked:text-neutral-content">What is Lorem
+              Ipsum?</div>
+            <div class="collapse-content text-xs text-gray-600">
+              <p class="pt-3">Resposta de exemplo.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow rounded-none border-t border-gray-200">
+            <input type="radio" name="faq" class="peer" />
+            <div class="collapse-title text-xs peer-checked:bg-neutral peer-checked:text-neutral-content">Why do we use
+              it?</div>
+            <div class="collapse-content text-xs text-gray-600">
+              <p class="pt-3">Resposta de exemplo.</p>
             </div>
           </div>
 
         </div>
       </div>
+    </section>
 
-    </header>
+    <!-- ========== REALIZAÇÃO / ORGANIZAÇÃO ========== -->
+    <section class="bg-black py-12 px-6 text-center">
+      <h2 class="text-white text-2xl font-semibold mb-6">Realização</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/concad1.png" alt="OAB, Concad e CASAG"
+            class="h-12 w-auto"></div>
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/concad1.png" alt="OAB, Concad e CASAG"
+            class="h-12 w-auto"></div>
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/concad1.png" alt="OAB, Concad e CASAG"
+            class="h-12 w-auto"></div>
+      </div>
 
-    <div class="flex min-h-[calc(100vh-113px)]">
+      <h2 class="text-white text-2xl font-semibold mb-6">Organização</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/hcsports.png" alt="HC Sports"
+            class="h-12 w-auto"></div>
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/hcsports.png" alt="HC Sports"
+            class="h-12 w-auto"></div>
+        <div class="bg-white rounded-md px-4 py-2"><img src="assets/img/hcsports.png" alt="HC Sports"
+            class="h-12 w-auto"></div>
+      </div>
+    </section>
 
-      <!-- SIDEBAR -->
-      <aside class="w-[205px] shrink-0 border-r border-[#dedede] bg-white px-[25px] pt-[25px]">
+    <!-- ========== FALE CONOSCO ========== -->
+    <section class="bg-white py-12 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-[#FF161F] text-3xl font-semibold mb-8">Fale conosco</h2>
 
-        <h1 class="mb-6 text-[20px] font-bold text-[#505050]">
-          Canal do cliente
-        </h1>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5" action="#" method="post">
 
-        <nav aria-label="Menu do cliente">
+          <div class="flex flex-col gap-5">
+            <label class="flex flex-col gap-2 text-sm font-semibold text-gray-800">
+              Nome
+              <input type="text" name="nome" placeholder="Digite o seu nome"
+                class="input input-bordered w-full font-normal text-sm" required />
+            </label>
 
-          <ul class="menu w-full p-0 text-[11px]">
+            <label class="flex flex-col gap-2 text-sm font-semibold text-gray-800">
+              E-mail
+              <input type="email" name="email" placeholder="Digite o seu e-mail"
+                class="input input-bordered w-full font-normal text-sm" required />
+            </label>
 
-            <!-- LOJA DE PROJETOS -->
-            <li class="mb-6">
-
-              <div class="pointer-events-none flex min-h-0 items-center gap-2 bg-transparent p-0 text-[#747474] hover:bg-transparent">
-                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="5" width="13" height="10"></rect>
-                  <path d="M6 18H4.5A1.5 1.5 0 0 1 3 16.5V5"></path>
-                  <circle cx="17.5" cy="15.5" r="3"></circle>
-                  <path d="M17.5 14v1.7l1 .7"></path>
-                </svg>
-
-                <span>Loja de projetos</span>
-              </div>
-
-              <ul class="mt-3 gap-1 pl-[25px]">
-
-                <li>
-                  <a href="index.html"
-                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] text-[#888] hover:bg-transparent hover:text-[#0758a6]">
-                    Dashboard
-                  </a>
-                </li>
-
-                <li>
-                  <a href="index2.html"
-                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] font-bold text-[#0758a6] hover:bg-transparent hover:text-[#0758a6]">
-                    Compra de créditos
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#"
-                    class="min-h-0 rounded-none bg-transparent px-0 py-[6px] text-[#888] hover:bg-transparent hover:text-[#0758a6]">
-                    Concluídos
-                  </a>
-                </li>
-
-              </ul>
-
-            </li>
-
-            <!-- GESTÃO DE PROJETOS -->
-            <li class="mb-6">
-              <a href="#"
-                class="min-h-0 gap-2 rounded-none bg-transparent p-0 text-[#747474] hover:bg-transparent hover:text-[#0758a6]">
-                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 4v8l5.5 5.5"></path>
-                  <path d="M12 12h8"></path>
-                </svg>
-                Gestão de projetos
-              </a>
-            </li>
-
-            <!-- CAMPANHAS -->
-            <li>
-              <a href="#"
-                class="min-h-0 gap-2 rounded-none bg-transparent p-0 text-[#747474] hover:bg-transparent hover:text-[#0758a6]">
-                <svg class="h-4 w-4 text-[#1b5f9e]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 13h3l8-4v8l-8-4H4z"></path>
-                  <path d="M7 13v5"></path>
-                  <path d="M17 10.5 19 9"></path>
-                  <path d="M17.5 13H21"></path>
-                  <path d="M17 15.5 19 17"></path>
-                </svg>
-                Campanhas
-              </a>
-            </li>
-
-          </ul>
-
-        </nav>
-
-      </aside>
-
-      <!-- CONTEÚDO PRINCIPAL -->
-      <main class="flex min-w-0 flex-1 flex-col justify-between bg-white p-6">
-
-        <!-- Conteúdo do Topo (Banner + Título + Cards) -->
-        <section class="w-full">
-
-          <!-- Banner -->
-          <div class="mb-6">
-            <a href="#" target="_blank">
-              <img src="assets/img/banner.png" alt="banner black-friday"
-                class="w-full transition duration-500 hover:scale-[1.01]" />
-            </a>
+            <label class="flex flex-col gap-2 text-sm font-semibold text-gray-800">
+              Ocupação
+              <input type="text" name="ocupacao" placeholder="Digite a sua ocupação"
+                class="input input-bordered w-full font-normal text-sm" />
+            </label>
           </div>
 
-          <!-- Título -->
-          <p class="py-4 text-lg font-bold text-[#333]">
-            Compre pontos e distribua como quiser
-          </p>
+          <label class="flex flex-col gap-2 text-sm font-semibold text-gray-800">
+            Mensagem
+            <textarea name="mensagem" placeholder="Digite a mensagem"
+              class="textarea textarea-bordered w-full h-full min-h-48 font-normal text-sm resize-none"
+              required></textarea>
+          </label>
 
-          <!-- Grid de Cards -->
-          <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <div class="md:col-span-2 flex md:justify-end">
+            <button type="submit" class="btn btn-sm border-none bg-[#0095D9] text-white font-bold rounded-md">
+              Enviar e-mail
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-            <!-- Card 1 -->
-            <div class="card rounded-sm border border-gray-200 bg-base-100">
-              <figure class="px-6 pt-6">
-                <img src="assets/img/design.png" alt="Design" class="rounded-sm" />
-              </figure>
-              <div class="card-body p-6">
-                <p class="text-sm text-gray-500">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</p>
-                <div class="mt-2 flex items-center justify-between">
-                  <h2 class="card-title text-base font-bold text-[#333]">Comprar Créditos</h2>
-                  <img src="assets/img/icon.png" alt="seta"
-                    class="h-5 w-5 cursor-pointer transition duration-300 hover:scale-125" />
-                </div>
-                <p class="text-xs text-gray-400">5 créditos por R$10.000,00</p>
-              </div>
-            </div>
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="bg-gray-100 py-10 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-gray-200 pt-6">
+          <a href="index.html">
+            <img src="assets/img/logo-olimpiada.png" alt="Olimpíadas da Advocacia" class="h-10 w-auto">
+          </a>
 
-            <!-- Card 2 -->
-            <div class="card rounded-sm border border-gray-200 bg-base-100 shadow-sm">
-              <figure class="px-6 pt-6">
-                <img src="assets/img/pdv.png" alt="PDV" class="rounded-sm" />
-              </figure>
-              <div class="card-body p-6">
-                <p class="text-sm text-gray-500">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</p>
-                <div class="mt-2 flex items-center justify-between">
-                  <h2 class="card-title text-base font-bold text-[#333]">Comprar Créditos</h2>
-                  <img src="assets/img/icon.png" alt="seta"
-                    class="h-5 w-5 cursor-pointer transition duration-300 hover:scale-125" />
-                </div>
-                <p class="text-xs text-gray-400">21 créditos por R$120.000,00</p>
-              </div>
-            </div>
+          <nav aria-label="Rodapé">
+            <ul class="flex flex-wrap justify-center gap-6 text-xs font-semibold text-gray-800">
+              <li><a href="index.html" class="text-[#0095D9]">Home</a></li>
+              <li><a href="#modalidades" class="hover:text-[#0095D9]">Modalidades</a></li>
+              <li><a href="#agenda" class="hover:text-[#0095D9]">Agenda</a></li>
+              <li><a href="#resultados" class="hover:text-[#0095D9]">Resultados</a></li>
+              <li><a href="#canais" class="hover:text-[#0095D9]">Canais</a></li>
+              <li><a href="#regulamento" class="hover:text-[#0095D9]">Regulamento</a></li>
+            </ul>
+          </nav>
 
-            <!-- Card 3 -->
-            <div class="card rounded-sm border border-gray-200 bg-base-100 shadow-sm">
-              <figure class="px-6 pt-6">
-                <img src="assets/img/Wordpress.png" alt="WordPress" class="rounded-sm" />
-              </figure>
-              <div class="card-body p-6">
-                <p class="text-sm text-gray-500">Descontos cumulativos para projetos em Wordpress para 2025.</p>
-                <div class="mt-2 flex items-center justify-between">
-                  <h2 class="card-title text-base font-bold text-[#333]">Comprar Créditos</h2>
-                  <img src="assets/img/icon.png" alt="seta"
-                    class="h-5 w-5 cursor-pointer transition duration-300 hover:scale-125" />
-                </div>
-                <p class="text-xs text-gray-400">21 créditos por R$12.000,00</p>
-              </div>
-            </div>
+          <a href="#" aria-label="Instagram"
+            class="size-6 rounded-md bg-[#0095D9] text-white flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
 
-          </div> <!-- /grid de cards -->
-
-        </section>
-
-        <!-- FOOTER / RODAPÉ -->
-        <footer class="mt-12 flex w-full items-center justify-end border-t border-gray-200 pt-4">
-          <img src="assets/img/Vector.png" alt="AgênciaWeb Escolar" class="h-8 w-auto" />
-        </footer>
-
-      </main>
-
-    </div>
-
-  </div>
-
+        <p class="text-center text-xs text-gray-600 mt-8">2023 HC Sports. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
 </body>
 
 </html>
