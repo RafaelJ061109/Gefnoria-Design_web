@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades | Olimpíadas da Advocacia</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="flex min-h-screen flex-col bg-base-100 font-[Roboto,Arial,sans-serif] text-base-content">
+  <header class="border-b border-base-300 bg-base-100 shadow-sm">
+    <div class="mx-auto flex max-w-[1256px] flex-col gap-2 px-5 py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-7">
+      <a class="flex h-11 shrink-0 items-center no-underline lg:w-[150px]" href="index.html" aria-label="Olimpíadas da Advocacia — início">
+        <img class="block max-h-12 w-32 object-contain object-left" src="assets/img/logo-olimpiadas.png" alt="Olimpíadas da Advocacia — CONCAD 2023">
+      </a>
+      <nav class="flex min-h-9 max-w-full items-center gap-5 overflow-x-auto pb-1 text-sm font-medium sm:gap-6 sm:text-base lg:justify-end lg:gap-7" aria-label="Navegação principal">
+        <a class="whitespace-nowrap text-base-content/70 no-underline hover:text-info" href="index.html">Home</a>
+        <a class="whitespace-nowrap font-bold text-info no-underline" href="modalidades.html" aria-current="page">Modalidades</a>
+        <a class="whitespace-nowrap text-base-content/70 no-underline hover:text-info" href="noticias.html">Notícias</a>
+        <a class="whitespace-nowrap text-base-content/70 no-underline hover:text-info" href="cronograma.html">Cronograma</a>
+        <a class="whitespace-nowrap text-base-content/70 no-underline hover:text-info" href="administradores.html">Administradores</a>
+        <a class="whitespace-nowrap text-base-content/70 no-underline hover:text-info" href="regulamento.html">Regulamento</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mx-auto w-full max-w-[1256px] flex-1 px-5 pb-12 pt-7 sm:px-8 sm:pb-16 sm:pt-10 xl:px-0">
+    <h1 class="text-2xl font-extrabold tracking-tight sm:text-3xl">MODALIDADES</h1>
+    <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-5">
+      <label class="input input-bordered flex h-[51px] w-full max-w-[508px] items-center gap-3 rounded-xl bg-base-100 px-4 shadow-sm" aria-label="Pesquisar modalidade">
+        <i class="fa-solid fa-magnifying-glass text-lg text-base-content/60" aria-hidden="true"></i>
+        <input id="sportSearch" class="grow" type="search" placeholder="Pesquise aqui por uma modalidade" autocomplete="off">
+      </label>
+      <div class="dropdown w-full sm:w-auto" id="filterWrap">
+        <button class="btn btn-outline h-[51px] w-full justify-between rounded-xl border-base-300 bg-base-100 px-4 text-base font-normal text-base-content sm:w-[190px]" id="filterToggle" type="button" aria-expanded="false">
+          <span id="filterLabel">Filtrar por</span><i class="fa-solid fa-chevron-down text-info" aria-hidden="true"></i>
+        </button>
+        <ul class="menu dropdown-content z-10 mt-2 w-full rounded-box border border-base-300 bg-base-100 p-2 shadow-lg sm:w-56" id="filterMenu" role="menu">
+          <li><button type="button" data-filter="all" role="menuitem">Todas as modalidades</button></li>
+          <li><button type="button" data-filter="individual" role="menuitem">Individuais</button></li>
+          <li><button type="button" data-filter="team" role="menuitem">Coletivas</button></li>
+        </ul>
+      </div>
+    </div>
+    <section class="mt-9 grid grid-cols-1 gap-x-4 gap-y-7 min-[371px]:grid-cols-2 md:grid-cols-3 xl:mt-14 xl:grid-cols-5 xl:gap-x-6" id="sportsGrid" aria-label="Lista de modalidades">
+      <section class="letter-group min-w-0" data-letter="B">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">B</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Basquete%203x3" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-basketball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Basquete 3x3</span>
+          </a>
+          <a href="modalidade.html?nome=Beach%20Tennis" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Beach Tennis</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="C">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">C</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Corrida%20de%20Rua" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Corrida de Rua</span>
+          </a>
+          <a href="modalidade.html?nome=Crossfit" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Crossfit</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="F">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">F</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Futebol%20Society" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-futbol" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Futebol Society</span>
+          </a>
+          <a href="modalidade.html?nome=Futebol%20de%20Mesa" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-table-cells" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Futebol de Mesa</span>
+          </a>
+          <a href="modalidade.html?nome=Futebol%2011" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-futbol" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Futebol 11</span>
+          </a>
+          <a href="modalidade.html?nome=Futebol%207" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Futebol 7</span>
+          </a>
+          <a href="modalidade.html?nome=Futevôlei" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Futevôlei</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="J">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">J</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Jiu-jitsu" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-user-ninja" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Jiu-jitsu</span>
+          </a>
+          <a href="modalidade.html?nome=Judô" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-medal" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Judô</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="N">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">N</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Natação" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-person-swimming" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Natação</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="S">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">S</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Sinuca" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Sinuca</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="T">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">T</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Tênis" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-baseball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Tênis</span>
+          </a>
+          <a href="modalidade.html?nome=Tênis%20de%20Mesa" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Tênis de Mesa</span>
+          </a>
+          <a href="modalidade.html?nome=Tiro%20Esportivo" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Tiro Esportivo</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="V">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">V</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Vôlei%20de%20Praia" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Vôlei de Praia</span>
+          </a>
+          <a href="modalidade.html?nome=Vôlei%20de%20Quadra" data-kind="team" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-volleyball" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Vôlei de Quadra</span>
+          </a>
+        </div>
+      </section>
+      <section class="letter-group min-w-0" data-letter="X">
+        <h2 class="mb-3 -ml-1 text-[56px] font-normal leading-[62px] text-base-content">X</h2>
+        <div class="flex flex-col gap-1.5">
+          <a href="modalidade.html?nome=Xadrez" data-kind="individual" class="group flex min-h-9 min-w-0 items-center gap-2.5 rounded-full py-1 pr-2 text-xl leading-[1.15] text-base-content/80 no-underline transition-colors hover:bg-base-200 hover:text-info">
+            <span class="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral text-sm text-neutral-content transition-colors group-hover:bg-info"><i class="fa-solid fa-chess" aria-hidden="true"></i></span>
+            <span class="min-w-0 truncate">Xadrez</span>
+          </a>
+        </div>
+      </section>
+    </section>
+    <p class="mt-8 hidden text-base-content/60" id="noResults">Nenhuma modalidade encontrada.</p>
+  </main>
+  <footer class="bg-base-200">
+    <div class="mx-auto flex max-w-[1256px] flex-col justify-center gap-2 px-5 py-6 text-xs text-base-content/70 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-sm xl:px-0">
+      <strong class="font-semibold">I Olimpíadas da Advocacia 2023</strong><span>2023 HC Sports. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+  <script>
+    const searchInput = document.getElementById('sportSearch');
+    const groups = [...document.querySelectorAll('.letter-group')];
+    const filterToggle = document.getElementById('filterToggle');
+    const filterWrap = document.getElementById('filterWrap');
+    const filterMenu = document.getElementById('filterMenu');
+    const filterLabel = document.getElementById('filterLabel');
+    const noResults = document.getElementById('noResults');
+    let activeFilter = 'all';
+    function updateSports() {
+      const term = searchInput.value.trim().toLocaleLowerCase('pt-BR');
+      let visibleCount = 0;
+      groups.forEach(group => {
+        let groupCount = 0;
+        group.querySelectorAll('a[data-kind]').forEach(link => {
+          const matchesText = link.innerText.toLocaleLowerCase('pt-BR').includes(term);
+          const matchesFilter = activeFilter === 'all' || link.dataset.kind === activeFilter;
+          const visible = matchesText && matchesFilter;
+          link.classList.toggle('hidden', !visible);
+          if (visible) groupCount++;
+        });
+        group.classList.toggle('hidden', groupCount === 0);
+        visibleCount += groupCount;
+      });
+      noResults.classList.toggle('hidden', visibleCount !== 0);
+    }
+    searchInput.addEventListener('input', updateSports);
+    filterToggle.addEventListener('click', () => {
+      const isOpen = filterToggle.getAttribute('aria-expanded') === 'true';
+      filterToggle.setAttribute('aria-expanded', String(!isOpen));
+      filterWrap.classList.toggle('dropdown-open', !isOpen);
+    });
+    filterMenu.querySelectorAll('button[data-filter]').forEach(button => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterLabel.textContent = activeFilter === 'all' ? 'Filtrar por' : button.textContent.trim();
+        filterWrap.classList.remove('dropdown-open');
+        filterToggle.setAttribute('aria-expanded', 'false');
+        updateSports();
+      });
+    });
+    document.addEventListener('click', event => {
+      if (!filterWrap.contains(event.target)) {
+        filterWrap.classList.remove('dropdown-open');
+        filterToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    updateSports();
+  </script>
+</body>
+</html>
