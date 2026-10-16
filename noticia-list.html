@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notícias | Olimpíadas da Advocacia 2023</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Open Sans"', 'sans-serif'] },
+          colors: { azul: '#0090D6', verde: '#1BA35B', roxo: '#9B3FD0' }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-[#333] bg-white min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <header class="navbar bg-white shadow-[0_1px_4px_rgba(0,0,0,.12)] min-h-[56px] px-0 sticky top-0 z-20">
+    <div class="w-full max-w-[1054px] mx-auto px-4 lg:px-0 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="Olimpíadas da Advocacia CONCAD 2023">
+        <img src="assents/img/logo.png" alt="Olimpíadas da Advocacia CONCAD 2023" class="h-10 w-auto">
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 text-[15px] font-semibold">
+          <li><a href="#" class="hover:text-azul">Home</a></li>
+          <li><a href="#" class="hover:text-azul">Modalidades</a></li>
+          <li><a href="#" class="text-azul">Notícias</a></li>
+          <li><a href="#" class="hover:text-azul">Cronograma</a></li>
+          <li><a href="#" class="hover:text-azul">Administradores</a></li>
+          <li><a href="#" class="hover:text-azul">Regulamento</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-ghost btn-square md:hidden" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="flex-1 w-full max-w-[1054px] mx-auto px-4 lg:px-0 pt-10 pb-24">
+    <h1 class="text-[26px] font-bold uppercase tracking-tight">Notícias</h1>
+
+    <!-- Busca + filtro -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-7">
+      <label class="input input-bordered flex items-center gap-3 h-[43px] w-full sm:w-[426px] bg-white border-[#d9d9d9] focus-within:border-azul focus-within:outline-none">
+        <svg class="w-5 h-5 text-[#555]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="busca" type="text" class="grow text-sm placeholder:text-[#999]" placeholder="Pesquise aqui por uma notícia">
+      </label>
+      <select id="filtro" class="select select-bordered h-[43px] min-h-0 w-full sm:w-[133px] bg-white border-[#d9d9d9] text-sm text-[#555] font-normal focus:outline-none focus:border-azul">
+        <option value="">Filtrar por</option>
+        <option>Organização</option>
+        <option>Inscrições</option>
+      </select>
+    </div>
+
+    <!-- Cards -->
+    <section id="grid" class="grid gap-x-8 gap-y-10 mt-10 sm:grid-cols-2 lg:grid-cols-3"></section>
+    <p id="vazio" class="hidden text-center text-[#777] mt-10">Nenhuma notícia encontrada.</p>
+
+    <!-- Paginação -->
+    <div class="flex items-center justify-end gap-2 mt-[60px] text-sm">
+      <button class="btn btn-square btn-xs w-6 h-6 min-h-0 bg-[#d9d9d9] border-0 text-white" disabled aria-label="Anterior">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg>
+      </button>
+      <span class="mx-1">Página 1 de 2</span>
+      <button id="btn-proxima" class="btn btn-square btn-xs w-6 h-6 min-h-0 bg-azul hover:bg-azul/90 border-0 text-white" aria-label="Próxima">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f2f2f2] h-[96px]">
+    <div class="max-w-[1054px] mx-auto px-4 lg:px-0 h-full flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-1 text-xs text-[#555]">
+      <span class="font-semibold">I Olimpíadas da Advocacia 2023</span>
+      <span>2023 HC Sports. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <dialog id="modal-construcao" class="modal">
+    <div class="modal-box text-center max-w-sm">
+      <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-azul/10 text-azul">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+      </div>
+      <h3 class="text-lg font-bold">Página em construção</h3>
+      <p class="py-3 text-sm text-[#555]">A segunda página de notícias ainda está em construção. Volte em breve!</p>
+      <div class="modal-action justify-center mt-2">
+        <button type="button" data-fechar class="btn bg-azul hover:bg-azul/90 border-0 text-white px-8">Entendi</button>
+      </div>
+    </div>
+    <div class="modal-backdrop" data-fechar aria-label="Fechar"></div>
+  </dialog>
+
+  <script>
+    // Imagens em assents/img/noticia1.png ... noticia6.png
+    const noticias = [
+      { data: '17/03/2023', cat: 'Organização', img: 'assents/img/noticia1.png',
+        titulo: 'Colégio de presidentes das CAA/Concad anuncia inscrições para Olimpíadas da Advocacia',
+        texto: 'As datas de inscrições para a primeira edição das Olimpíadas da Advocacia foram anunciadas nesta terça-feira (14/3) durante o 5º Colégio de presidentes das Caixas de Assistência aos Advogados (CAA) […]' },
+      { data: '17/03/2023', cat: 'Organização', img: 'assents/img/noticia2.png',
+        titulo: 'Fique por dentro das modalidades que estarão em disputa, categorias e limites de atletas por seccional',
+        texto: 'BASQUETE 3×3: BEACH TENNIS: CORRIDA DE RUA – 10Km e 5Km: CROSS: FUTEBOL 11: FUT 7: FUTEBOL SOCIETY: FUTMESA: FUTEVÔLEI: JIU-JITSU: JUDÔ: NATAÇÃO: SINUCA: TÊNIS: TÊNIS DE MESA: TIRO ESPORTIVO: […]' },
+      { data: '17/03/2023', cat: 'Inscrições', img: 'assents/img/noticia3.png',
+        titulo: 'Olimpíada da Advocacia terá inscrições 100% digitais',
+        texto: 'Uma das grandes novidades da Olimpíada da Advocacia para 2023 é a implantação do Sistema de Inscrições on-line para os atletas. Um sistema de cadastramento e gerenciamento específico para os […]' },
+      { data: '09/03/2023', cat: 'Organização', img: 'assents/img/noticia4.png',
+        titulo: 'Coordenação Técnica das Olimpíadas da Advocacia será da HC Sports',
+        texto: 'Será da HC Sports a responsabilidade pela Coordenação Técnica das competições nas Olimpíadas da Advocacia CONCAD 2023. A empresa, que já esteve com a CONCAD em outras competições, como os […]' },
+      { data: '09/03/2023', cat: 'Organização', img: 'assents/img/noticia5.png',
+        titulo: 'Praças esportivas recebem visita e passam por vistorias',
+        texto: 'Uma comitiva da CASAG, acompanhada por representantes do Conselho Federal da OAB, vistoriaram e visitaram, nesta terça-feira, inúmeras praças esportivas na Região Metropolitana de Goiânia. Na pauta, as Olimpíadas da […]' },
+      { data: '07/03/2023', cat: 'Organização', img: 'assents/img/noticia6.png',
+        titulo: 'Goiânia sediará em 2023 a primeira edição das Olimpíadas da Advocacia',
+        texto: 'Goiânia vai sediar, em 2023, as primeiras Olimpíadas da Advocacia. O anúncio foi feito durante o II Colégio de Presidentes de Caixas de Assistência dos Advogados (CAAs), nesta sexta-feira (20/5), […]' }
+    ];
+    const corCat = { 'Organização': 'text-verde', 'Inscrições': 'text-roxo' };
+    const grid = document.getElementById('grid');
+    const busca = document.getElementById('busca');
+    const filtro = document.getElementById('filtro');
+
+    function render() {
+      const q = busca.value.toLowerCase().trim();
+      const f = filtro.value;
+      const lista = noticias.filter(n =>
+        (!f || n.cat === f) && (n.titulo + ' ' + n.texto).toLowerCase().includes(q));
+      grid.innerHTML = lista.map(n => `
+        <article class="card rounded-none bg-transparent cursor-pointer group">
+          <figure class="aspect-[330/212] rounded-[3px] overflow-hidden">
+            <img src="${n.img}" alt="${n.titulo}" loading="lazy"
+                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          </figure>
+          <div class="pt-6">
+            <div class="flex items-center gap-2 text-xs font-semibold">
+              <span class="text-azul">${n.data}</span>
+              <span class="w-1 h-1 rounded-full bg-[#ccc]"></span>
+              <span class="${corCat[n.cat]}">${n.cat}</span>
+            </div>
+            <h2 class="mt-4 text-lg font-semibold leading-snug group-hover:text-azul transition-colors">${n.titulo}</h2>
+            <p class="mt-2 text-sm leading-[19px] text-[#555]">${n.texto}</p>
+          </div>
+        </article>`).join('');
+      document.getElementById('vazio').classList.toggle('hidden', lista.length > 0);
+    }
+    document.getElementById('btn-proxima').addEventListener('click', () =>
+      document.getElementById('modal-construcao').showModal());
+    const modal = document.getElementById('modal-construcao');
+    modal.querySelectorAll('[data-fechar]').forEach(el =>
+      el.addEventListener('click', () => modal.close()));
+    busca.addEventListener('input', render);
+    filtro.addEventListener('change', render);
+    render();
+  </script>
+</body>
+</html>
