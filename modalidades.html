@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades | Olimpíadas da Advocacia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-['Open_Sans'] text-sm text-[#333333]">
+
+  <!-- CABEÇALHO -->
+  <header class="navbar shadow-sm">
+    <div class="mx-auto flex w-full max-w-5xl items-center">
+      <div>
+        <a href="index.html">
+          <img src="assets/img/logo-olimpiadas.png" alt="Olimpíadas da Advocacia" class="w-28">
+        </a>
+      </div>
+      <div class="flex gap-6 ml-auto">
+        <a href="index.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Home</a>
+        <a href="modalidades.html" class="font-semibold text-[#0095D9]">Modalidades</a>
+        <a href="noticia-list.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Notícias</a>
+        <a href="cronograma.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Cronograma</a>
+        <a href="administradores.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Administradores</a>
+        <a href="regulamento.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Regulamento</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="mx-auto min-h-screen max-w-5xl pb-16">
+
+    <h1 class="font-['Poppins'] mt-8 text-2xl font-semibold uppercase">Modalidades</h1>
+
+    <!-- Busca + filtro -->
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+
+      <label class="input w-full sm:max-w-md">
+        <i class="fa-solid fa-magnifying-glass text-[#4F4F4F]"></i>
+        <input id="sportSearch" type="search" class="grow" placeholder="Pesquise aqui por uma modalidade"
+          autocomplete="off">
+      </label>
+
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn w-full justify-between sm:w-44">
+          <span id="filterLabel">Filtrar por</span>
+          <i class="fa-solid fa-chevron-down text-[#0095D9]"></i>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu z-10 mt-1 w-52 rounded-box bg-base-100 p-2 shadow-md">
+          <li><button type="button" data-filter="all">Todas as modalidades</button></li>
+          <li><button type="button" data-filter="individual">Individuais</button></li>
+          <li><button type="button" data-filter="team">Coletivas</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Lista de modalidades -->
+    <section id="sportsGrid" class="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">B</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-basketball"></i></span>
+            <span>Basquete 3x3</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-table-tennis-paddle-ball"></i></span>
+            <span>Beach Tennis</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">C</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-person-running"></i></span>
+            <span>Corrida de Rua</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-dumbbell"></i></span>
+            <span>Crossfit</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">F</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-futbol"></i></span>
+            <span>Futebol Society</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-table-cells"></i></span>
+            <span>Futebol de Mesa</span>
+          </a>
+          <a href="detalhamento-modalidades.html" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full bg-base-200 px-1 font-normal text-[#0095D9]">
+            <span class="flex size-7 items-center justify-center rounded-full bg-[#0095D9] text-xs text-white"><i
+                class="fa-solid fa-futbol"></i></span>
+            <span>Futebol 11</span>
+          </a>
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-person-running"></i></span>
+            <span>Futebol 7</span>
+          </a>
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-volleyball"></i></span>
+            <span>Futevôlei</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">J</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-user-ninja"></i></span>
+            <span>Jiu-jitsu</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-medal"></i></span>
+            <span>Judô</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">N</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-person-swimming"></i></span>
+            <span>Natação</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">S</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-circle-dot"></i></span>
+            <span>Sinuca</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">T</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-baseball"></i></span>
+            <span>Tênis</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-table-tennis-paddle-ball"></i></span>
+            <span>Tênis de Mesa</span>
+          </a>
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-bullseye"></i></span>
+            <span>Tiro Esportivo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">V</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-volleyball"></i></span>
+            <span>Vôlei de Praia</span>
+          </a>
+          <a href="#" data-kind="team"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-volleyball"></i></span>
+            <span>Vôlei de Quadra</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="letter-group">
+        <h2 class="font-['Poppins'] text-5xl font-medium">X</h2>
+        <div class="mt-2 flex flex-col gap-1">
+          <a href="#" data-kind="individual"
+            class="sport-link group btn btn-ghost justify-start gap-2 rounded-full px-1 font-normal hover:text-[#0095D9]">
+            <span
+              class="flex size-7 items-center justify-center rounded-full bg-neutral text-xs text-neutral-content group-hover:bg-[#0095D9]"><i
+                class="fa-solid fa-chess"></i></span>
+            <span>Xadrez</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <p id="noResults" class="mt-8 hidden text-[#4F4F4F]">Nenhuma modalidade encontrada.</p>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-[#F2F2F2]">
+    <div class="footer sm:footer-horizontal mx-auto max-w-5xl items-center justify-between py-8 text-xs">
+      <p class="font-semibold">I Olimpíadas da Advocacia 2023</p>
+      <p class="text-[#4F4F4F]">2023 HC Sports. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('sportSearch');
+    const groups = document.querySelectorAll('.letter-group');
+    const filterLabel = document.getElementById('filterLabel');
+    const noResults = document.getElementById('noResults');
+    let activeFilter = 'all';
+
+    function updateSports() {
+      const term = searchInput.value.trim().toLocaleLowerCase('pt-BR');
+      let visibleCount = 0;
+
+      groups.forEach(group => {
+        let groupCount = 0;
+
+        group.querySelectorAll('.sport-link').forEach(link => {
+          const matchesText = link.innerText.toLocaleLowerCase('pt-BR').includes(term);
+          const matchesFilter = activeFilter === 'all' || link.dataset.kind === activeFilter;
+          const visible = matchesText && matchesFilter;
+
+          link.classList.toggle('hidden', !visible);
+          if (visible) groupCount++;
+        });
+
+        group.classList.toggle('hidden', groupCount === 0);
+        visibleCount += groupCount;
+      });
+
+      noResults.classList.toggle('hidden', visibleCount > 0);
+    }
+
+    searchInput.addEventListener('input', updateSports);
+
+    document.querySelectorAll('[data-filter]').forEach(button => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterLabel.textContent = activeFilter === 'all' ? 'Filtrar por' : button.textContent;
+        document.activeElement.blur(); // fecha o dropdown
+        updateSports();
+      });
+    });
+  </script>
+</body>
+
+</html>

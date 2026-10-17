@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modalidades - Detalhamento de Modalidade</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-['Open_Sans'] text-sm text-[#333333]">
+
+    <!-- CABEÇALHO -->
+    <header class="navbar shadow-sm">
+        <div class="mx-auto flex w-full max-w-5xl items-center">
+            <div>
+                <a href="index.html">
+                    <img src="assets/img/logo site.png" alt="Olimpíadas da Advocacia" class="w-28">
+                </a>
+            </div>
+            <div class="flex gap-6 ml-auto">
+                <a href="index.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Home</a>
+                <a href="modalidades.html" class="font-semibold text-[#0095D9]">Modalidades</a>
+                <a href="noticia-list.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Notícias</a>
+                <a href="cronograma.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Cronograma</a>
+                <a href="administradores.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Administradores</a>
+                <a href="regulamento.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Regulamento</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO (min-h-screen empurra o footer para baixo da dobra) -->
+    <section class="mx-auto min-h-screen max-w-5xl pb-16">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumbs pt-6 text-xs">
+            <ul>
+                <li><a href="modalidades.html" class="text-[#333333]">Modalidades</a></li>
+                <li>
+                    <a href="#" id="breadcrumb-modalidade" class="font-semibold text-[#FF161F] no-underline">Futebol
+                        11</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Título -->
+        <h1 id="titulo-modalidade" class="font-['Poppins'] mt-4 text-2xl font-semibold leading-snug">
+            Futebol 11
+        </h1>
+
+        <div class="mt-4 grid grid-cols-1 items-start gap-8 md:grid-cols-[36%_1fr]">
+
+            <!-- IMAGEM -->
+            <div>
+                <img id="imagem-modalidade" src="assets/img/detalhamento-M-foto.png"
+                    alt="Imagem da modalidade Futebol 11" class="aspect-[4/5] w-full rounded-lg object-cover">
+                <p id="fonte-imagem" class="mt-2 text-[10px] text-[#4F4F4F]">
+                    Fonte da figura: hcsports
+                </p>
+            </div>
+
+            <!-- TEXTOS -->
+            <div class="space-y-6 leading-relaxed">
+
+                <!-- Formato de disputa -->
+                <div>
+                    <h2 class="font-['Poppins'] text-lg font-medium">Formato de disputa</h2>
+                    <div id="formato-modalidade" class="mt-2 space-y-6">
+                        <p>
+                            O futebol, também referido como futebol de campo, futebol de onze e,
+                            originalmente, futebol associado, é um desporto de equipe jogado entre
+                            dois times de 11 jogadores cada um e um árbitro que se ocupa da correta
+                            aplicação das normas.
+                        </p>
+                        <p>As disputas serão conforme abaixo:</p>
+                        <ul class="list-disc pl-6">
+                            <li>Categorias: LIVRE e MÁSTER – Masculino;</li>
+                            <li>Limitação por Seccional: 01 equipe LIVRE e 01 equipe MÁSTER;</li>
+                            <li>Número de atletas: até 30 por equipe.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Regras -->
+                <div>
+                    <h2 class="font-['Poppins'] text-lg font-medium">Regras básicas</h2>
+                    <ul id="regras-modalidade" class="mt-2 list-disc pl-6">
+                        <li>Aguarde a divulgação do Regulamento Geral das Olimpíadas.</li>
+                    </ul>
+                </div>
+
+                <!-- Local -->
+                <div>
+                    <h2 class="font-['Poppins'] text-lg font-medium">Local de competição</h2>
+                    <div class="mt-2 space-y-6">
+                        <p id="local-modalidade">
+                            CEL OAB-GOAv. de Furnas, 312 – Jardim Rio Grande, Aparecida de Goiânia – GO,
+                            74982-490
+                        </p>
+                        <p>Outros locais também estão em definição.</p>
+                    </div>
+                </div>
+
+                <!-- Programação -->
+                <div>
+                    <h2 class="font-['Poppins'] text-lg font-medium">Programação</h2>
+                    <ul id="programacao-modalidade" class="mt-2 list-disc pl-6">
+                        <li>Segunda-feira (03/07) – Jogos a partir das 08h00;</li>
+                        <li>Terça-feira (04/07) – Jogos a partir das 08h00;</li>
+                        <li>Quarta-feira (05/07) – Jogos a partir das 08h00;</li>
+                        <li>Quinta-feira (06/07) – Jogos a partir das 08h00;</li>
+                        <li>Sexta-feira (07/07) – Jogos a partir das 08h00;</li>
+                        <li>Sábado (08/07) – Jogos a partir das 08h00.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-[#F2F2F2]">
+        <div class="footer sm:footer-horizontal mx-auto max-w-5xl items-center justify-between py-8 text-xs">
+            <p class="font-semibold">I Olimpíadas da Advocacia 2023</p>
+            <p class="text-[#4F4F4F]">2023 HC Sports. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

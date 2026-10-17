@@ -1,43 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cronograma | Olimpíadas da Advocacia</title>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#383838;font-family:Roboto,Arial,sans-serif}.header{height:68px;box-shadow:0 2px 5px #0001;border-bottom:1px solid #eee}.header-inner,main,.footer-inner{width:min(100% - 64px,1110px);margin:auto}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{width:120px;height:48px;display:flex;align-items:center;flex-shrink:0}.brand img{max-width:100%;max-height:100%;object-fit:contain}.nav{display:flex;gap:32px;white-space:nowrap;align-items:center}.nav a{font-size:16px;font-weight:600;color:#555;text-decoration:none}.nav a.active{color:#079bd6}main{margin-top:38px}.heading{font-size:28px;font-weight:800;line-height:1.2;margin:0;letter-spacing:-.3px}.controls{display:flex;gap:12px}.circle{height:36px;width:36px;border:1px solid #777;border-radius:50%;background:#fff;color:#444;cursor:pointer}.calendar{margin-top:28px;border:1px solid #dedede;border-radius:9px;overflow:hidden}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}.day-head{min-height:76px;background:#f7f7f7;border-bottom:1px solid #ddd;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:13px;font-weight:600}.date{width:34px;height:34px;border-radius:50%;background:#383838;color:#fff;display:grid;place-items:center;font-size:16px}.day-col{padding:10px 8px;border-right:1px solid #e5e5e5;min-width:0}.day-col:last-child{border-right:0}.event{border:1px solid #e2e2e2;border-radius:6px;padding:8px;margin-bottom:8px;min-height:55px;overflow:hidden}.time{font-size:12px;color:#666;margin-bottom:6px;white-space:nowrap}.event-name{display:flex;align-items:center;gap:6px;font-size:13px;line-height:1.15;font-weight:600;white-space:nowrap}.sport-icon{width:17px;height:17px;min-width:17px;border-radius:50%;display:inline-grid;place-items:center;background:#393939;color:#fff;font-size:9px}.section-two{margin-top:125px}.accordion{margin-top:20px}.sport-row{border-bottom:1px solid #e5e5e5}.sport-toggle{width:100%;min-height:50px;display:flex;align-items:center;gap:8px;border:0;background:transparent;text-align:left;padding:0;color:#555;cursor:pointer;font-size:15px}.sport-toggle[aria-expanded=true]{color:#079bd6}.sport-toggle[aria-expanded=true] .sport-icon{background:#079bd6}.chevron{margin-left:auto;margin-right:22px;transition:transform .2s}.sport-toggle[aria-expanded=true] .chevron{transform:rotate(180deg)}.table-wrap{overflow-x:auto;padding-bottom:8px}.detail-table{width:100%;min-width:600px;border:1px solid #e2e2e2;border-spacing:0;border-radius:6px;overflow:hidden;font-size:13px}.detail-table td{padding:14px 12px;border-right:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;white-space:nowrap}.detail-table tr:last-child td{border-bottom:0}.detail-table td:last-child{border-right:0;font-weight:600}.detail-table td:first-child,.detail-table td:nth-child(2),.detail-table td:nth-child(4),.detail-table td:nth-child(5){font-weight:600}footer{height:55px;background:#f2f2f2;margin-top:150px;display:flex;align-items:center}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:#666}
-@media(max-width:800px){.header{height:auto;min-height:62px}.header-inner{width:calc(100% - 28px);padding:10px 0;gap:16px;align-items:flex-start}.brand{width:90px;height:40px}.nav{gap:16px;overflow-x:auto;padding:8px 0;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{font-size:12px}main{width:calc(100% - 32px);margin-top:28px}.heading{font-size:22px}.calendar{overflow-x:auto}.grid{min-width:760px}.section-two{margin-top:70px}.sport-toggle{font-size:13px;min-height:45px}.detail-table{font-size:11px}.detail-table td{padding:10px}footer{margin-top:80px}.footer-inner{width:calc(100% - 32px);font-size:10px}}
-@media(max-width:480px){.header-inner{display:block}.brand{margin:0 auto 5px}.nav{width:100%;gap:18px}.nav a{font-size:11px}main{width:calc(100% - 28px)}.heading{font-size:19px}.circle{width:30px;height:30px}.section-two{margin-top:58px}footer{height:auto;min-height:52px;padding:12px 0}.footer-inner{align-items:flex-start;flex-direction:column;gap:5px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma | Olimpíadas da Advocacia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-<header class="header"><div class="header-inner">
-<a class="brand" href="index.html" aria-label="Página inicial"><img src="assets/img/logo-olimpiadas.png" alt="Olimpíadas da Advocacia" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span style="display:none;font-size:10px;font-weight:800">OLIMPÍADAS<br>DA ADVOCACIA</span></a>
-<nav class="nav" aria-label="Navegação principal"><a href="index.html">Home</a><a href="modalidades.html">Modalidades</a><a href="noticias.html">Notícias</a><a class="active" href="cronograma.html" aria-current="page">Cronograma</a><a href="resultados.html">Resultados</a><a href="administradores.html">Administradores</a><a href="regulamento.html">Regulamento</a></nav>
-</div></header>
-<main>
-<section><div class="flex items-center justify-between gap-4"><h1 class="heading">CRONOGRAMA GERAL</h1><div class="controls"><button id="prev" class="circle" aria-label="Semana anterior"><i class="fa-solid fa-chevron-left"></i></button><button id="next" class="circle" aria-label="Próxima semana"><i class="fa-solid fa-chevron-right"></i></button></div></div><div class="calendar"><div id="calendar-grid" class="grid"></div></div></section>
-<section class="section-two"><h2 class="heading">CRONOGRAMA POR MODALIDADES</h2><div id="accordion" class="accordion"></div></section>
-</main>
-<footer><div class="footer-inner"><strong>I Olimpíadas da Advocacia 2023</strong><span>2023 HC Sports. Todos os direitos reservados.</span></div></footer>
-<script>
-const days=[
-['Seg',3,[['08:00 - 11:00','Vôlei de Quadra','volleyball'],['11:20 - 13:00','Natação','person-swimming'],['14:30 - 17:00','Futebol Society','futbol'],['16:00 - 18:00','Judô','person-falling']]],
-['Ter',4,[['08:00 - 11:00','Basquete 3x3','basketball'],['10:00 - 13:00','Futebol 11','futbol'],['14:30 - 16:00','Futebol 7','futbol'],['16:20 - 18:00','Futebol Society','futbol'],['14:30 - 18:00','Jiu-Jitsu','hand-fist'],['16:00 - 18:00','Judô','person-falling']]],
-['Qua',5,[['08:00 - 11:00','Vôlei de Quadra','volleyball'],['08:00 - 11:00','Basquete 3x3','basketball'],['10:00 - 13:00','Natação','person-swimming'],['14:30 - 18:00','Jiu-Jitsu','hand-fist'],['15:00 - 18:00','Corrida 5km','person-running']]],
-['Qui',6,[['08:00 - 11:00','Vôlei de Quadra','volleyball'],['11:20 - 13:00','Natação','person-swimming'],['14:30 - 17:00','Futebol Society','futbol'],['16:00 - 18:00','Judô','person-falling']]],
-['Sex',7,[['08:00 - 11:00','Basquete 3x3','basketball'],['10:00 - 13:00','Futebol 11','futbol'],['14:30 - 16:00','Futebol 7','futbol'],['16:20 - 18:00','Futebol Society','futbol'],['14:30 - 18:00','Jiu-Jitsu','hand-fist'],['16:00 - 18:00','Judô','person-falling']]],
-['Sáb',8,[['08:00 - 11:00','Vôlei de Quadra','volleyball'],['08:00 - 11:00','Basquete 3x3','basketball'],['10:00 - 13:00','Natação','person-swimming'],['14:30 - 18:00','Jiu-Jitsu','hand-fist'],['15:00 - 18:00','Corrida 5km','person-running']]]];
-const sports=[['Basquete 3x3','basketball'],['Beach Tennis','table-tennis-paddle-ball'],['Corrida de Rua','person-running'],['Crossfit','dumbbell'],['Futebol 11','futbol'],['Futebol 7','futbol'],['Futebol Society','futbol'],['Futebol de Mesa','futbol'],['Futevôlei','volleyball'],['Jiu-Jitsu','hand-fist'],['Judô','person-falling'],['Natação','person-swimming'],['Sinuca','circle-dot'],['Tênis','table-tennis-paddle-ball'],['Tênis de Mesa','table-tennis-paddle-ball'],['Tiro Esportivo','bullseye'],['Vôlei de Quadra','volleyball'],['Vôlei de Praia','volleyball'],['Xadrez','chess']];
-const ico=t=>`<span class="sport-icon"><i class="fa-solid fa-${t}"></i></span>`;let offset=0;
-function drawCalendar(){document.querySelector('#calendar-grid').innerHTML=days.map(d=>`<div class="day-head"><span>${d[0]}</span><span class="date">${d[1]+offset*7}</span></div>`).join('')+days.map(d=>`<div class="day-col">${d[2].map(e=>`<div class="event"><div class="time">${e[0]}</div><div class="event-name">${ico(e[2])}<span>${e[1]}</span></div></div>`).join('')}</div>`).join('')}
-const rows=['03/07/2023|09h00|Lorem Ipsum is simply dummy text|Jogo 1|Grupo A|Equipe 1 x Equipe 2','03/07/2023|11h00|Lorem Ipsum is simply dummy text|Jogo 2|Grupo A|Equipe 2 x Equipe 3','03/07/2023|14h00|Lorem Ipsum is simply dummy text|Jogo 3|Grupo A|Equipe 1 x Equipe 3','04/07/2023|10h00|Lorem Ipsum is simply dummy text|Jogo 4|Grupo A|Final','04/07/2023|15h00|Lorem Ipsum is simply dummy text|Jogo 5|Grupo A|2º melhor colocado x 3º melhor colocado'];
-document.querySelector('#accordion').innerHTML=sports.map((s,i)=>`<div class="sport-row"><button class="sport-toggle" aria-expanded="${s[0]==='Futebol 11'}" aria-controls="detail-${i}">${ico(s[1])}<span>${s[0]}</span><i class="fa-solid fa-chevron-down chevron"></i></button><div id="detail-${i}" class="table-wrap" ${s[0]==='Futebol 11'?'':'hidden'}><table class="detail-table"><tbody>${rows.map(r=>`<tr>${r.split('|').map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`).join('');
-document.querySelectorAll('.sport-toggle').forEach(b=>b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));document.getElementById(b.getAttribute('aria-controls')).hidden=open}));
-document.querySelector('#prev').addEventListener('click',()=>{offset--;drawCalendar()});document.querySelector('#next').addEventListener('click',()=>{offset++;drawCalendar()});drawCalendar();
-</script>
-</body></html>
+
+<body class="flex min-h-screen flex-col font-['Open_Sans'] text-sm text-[#333333]">
+
+    <!-- CABEÇALHO -->
+    <header class="navbar shadow-sm">
+        <div class="mx-auto flex w-full max-w-5xl items-center">
+            <div>
+                <a href="index.html" aria-label="Página inicial">
+                    <img src="assets/img/logo-olimpiadas.png" alt="Olimpíadas da Advocacia" class="w-28"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <span class="hidden text-[10px] font-extrabold">OLIMPÍADAS<br>DA ADVOCACIA</span>
+                </a>
+            </div>
+            <nav class="ml-auto flex gap-6" aria-label="Navegação principal">
+                <a href="index.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Home</a>
+                <a href="modalidades.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Modalidades</a>
+                <a href="noticia-list.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Notícias</a>
+                <a href="cronograma.html" class="font-semibold text-[#0095D9]">Cronograma</a>
+                <a href="resultados.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Resultados</a>
+                <a href="administradores.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Administradores</a>
+                <a href="regulamento.html" class="text-[#4F4F4F] hover:text-[#0095D9]">Regulamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-10 lg:px-0">
+
+        <!-- Cronograma geral -->
+        <section>
+            <div class="flex items-center justify-between gap-4">
+                <h1 class="text-[28px] font-extrabold leading-tight tracking-tight">CRONOGRAMA GERAL</h1>
+
+                <div class="flex gap-3">
+                    <button id="prev" class="btn btn-circle btn-outline btn-sm size-9" aria-label="Semana anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next" class="btn btn-circle btn-outline btn-sm size-9" aria-label="Próxima semana">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-7 overflow-x-auto rounded-box border border-base-300">
+                <div id="calendar-grid" class="grid min-w-[760px] grid-cols-6"></div>
+            </div>
+        </section>
+
+        <!-- Cronograma por modalidades -->
+        <section class="mt-28">
+            <h2 class="text-[28px] font-extrabold leading-tight tracking-tight">CRONOGRAMA POR MODALIDADES</h2>
+            <div id="accordion" class="mt-5"></div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-[#F2F2F2]">
+        <div
+            class="footer sm:footer-horizontal mx-auto max-w-5xl items-center justify-between px-4 py-8 text-xs lg:px-0">
+            <p class="font-semibold">I Olimpíadas da Advocacia 2023</p>
+            <p class="text-[#4F4F4F]">2023 HC Sports. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const days = [
+            ['Seg', 3, [
+                ['08:00 - 11:00', 'Vôlei de Quadra', 'volleyball'],
+                ['11:20 - 13:00', 'Natação', 'person-swimming'],
+                ['14:30 - 17:00', 'Futebol Society', 'futbol'],
+                ['16:00 - 18:00', 'Judô', 'person-falling']
+            ]],
+            ['Ter', 4, [
+                ['08:00 - 11:00', 'Basquete 3x3', 'basketball'],
+                ['10:00 - 13:00', 'Futebol 11', 'futbol'],
+                ['14:30 - 16:00', 'Futebol 7', 'futbol'],
+                ['16:20 - 18:00', 'Futebol Society', 'futbol'],
+                ['14:30 - 18:00', 'Jiu-Jitsu', 'hand-fist'],
+                ['16:00 - 18:00', 'Judô', 'person-falling']
+            ]],
+            ['Qua', 5, [
+                ['08:00 - 11:00', 'Vôlei de Quadra', 'volleyball'],
+                ['08:00 - 11:00', 'Basquete 3x3', 'basketball'],
+                ['10:00 - 13:00', 'Natação', 'person-swimming'],
+                ['14:30 - 18:00', 'Jiu-Jitsu', 'hand-fist'],
+                ['15:00 - 18:00', 'Corrida 5km', 'person-running']
+            ]],
+            ['Qui', 6, [
+                ['08:00 - 11:00', 'Vôlei de Quadra', 'volleyball'],
+                ['11:20 - 13:00', 'Natação', 'person-swimming'],
+                ['14:30 - 17:00', 'Futebol Society', 'futbol'],
+                ['16:00 - 18:00', 'Judô', 'person-falling']
+            ]],
+            ['Sex', 7, [
+                ['08:00 - 11:00', 'Basquete 3x3', 'basketball'],
+                ['10:00 - 13:00', 'Futebol 11', 'futbol'],
+                ['14:30 - 16:00', 'Futebol 7', 'futbol'],
+                ['16:20 - 18:00', 'Futebol Society', 'futbol'],
+                ['14:30 - 18:00', 'Jiu-Jitsu', 'hand-fist'],
+                ['16:00 - 18:00', 'Judô', 'person-falling']
+            ]],
+            ['Sáb', 8, [
+                ['08:00 - 11:00', 'Vôlei de Quadra', 'volleyball'],
+                ['08:00 - 11:00', 'Basquete 3x3', 'basketball'],
+                ['10:00 - 13:00', 'Natação', 'person-swimming'],
+                ['14:30 - 18:00', 'Jiu-Jitsu', 'hand-fist'],
+                ['15:00 - 18:00', 'Corrida 5km', 'person-running']
+            ]]
+        ];
+
+        const sports = [
+            ['Basquete 3x3', 'basketball'],
+            ['Beach Tennis', 'table-tennis-paddle-ball'],
+            ['Corrida de Rua', 'person-running'],
+            ['Crossfit', 'dumbbell'],
+            ['Futebol 11', 'futbol'],
+            ['Futebol 7', 'futbol'],
+            ['Futebol Society', 'futbol'],
+            ['Futebol de Mesa', 'futbol'],
+            ['Futevôlei', 'volleyball'],
+            ['Jiu-Jitsu', 'hand-fist'],
+            ['Judô', 'person-falling'],
+            ['Natação', 'person-swimming'],
+            ['Sinuca', 'circle-dot'],
+            ['Tênis', 'table-tennis-paddle-ball'],
+            ['Tênis de Mesa', 'table-tennis-paddle-ball'],
+            ['Tiro Esportivo', 'bullseye'],
+            ['Vôlei de Quadra', 'volleyball'],
+            ['Vôlei de Praia', 'volleyball'],
+            ['Xadrez', 'chess']
+        ];
+
+        const rows = [
+            '03/07/2023|09h00|Lorem Ipsum is simply dummy text|Jogo 1|Grupo A|Equipe 1 x Equipe 2',
+            '03/07/2023|11h00|Lorem Ipsum is simply dummy text|Jogo 2|Grupo A|Equipe 2 x Equipe 3',
+            '03/07/2023|14h00|Lorem Ipsum is simply dummy text|Jogo 3|Grupo A|Equipe 1 x Equipe 3',
+            '04/07/2023|10h00|Lorem Ipsum is simply dummy text|Jogo 4|Grupo A|Final',
+            '04/07/2023|15h00|Lorem Ipsum is simply dummy text|Jogo 5|Grupo A|2º melhor colocado x 3º melhor colocado'
+        ];
+
+        // Colunas em negrito na tabela de detalhes (1ª, 2ª, 4ª, 5ª e 6ª)
+        const negrito = [0, 1, 3, 4, 5];
+
+        const ico = t =>
+            `<span class="inline-grid size-[17px] min-w-[17px] place-items-center rounded-full bg-neutral text-[9px] text-neutral-content">
+                <i class="fa-solid fa-${t}"></i>
+            </span>`;
+
+        let offset = 0;
+
+        function drawCalendar() {
+            const heads = days.map(d => `
+                <div class="flex min-h-[76px] flex-col items-center justify-center gap-1 border-b border-base-300 bg-[#F7F7F7] text-[13px] font-semibold">
+                    <span>${d[0]}</span>
+                    <span class="grid size-[34px] place-items-center rounded-full bg-neutral text-base text-neutral-content">${d[1] + offset * 7}</span>
+                </div>`).join('');
+
+            const cols = days.map(d => `
+                <div class="min-w-0 border-r border-base-300 px-2 py-2.5 last:border-r-0">
+                    ${d[2].map(e => `
+                        <div class="card card-border mb-2 min-h-[55px] overflow-hidden rounded-md border-base-300 bg-base-100">
+                            <div class="card-body gap-1.5 p-2">
+                                <span class="whitespace-nowrap text-xs text-[#666666]">${e[0]}</span>
+                                <div class="flex items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold leading-tight">
+                                    ${ico(e[2])}
+                                    <span>${e[1]}</span>
+                                </div>
+                            </div>
+                        </div>`).join('')}
+                </div>`).join('');
+
+            document.getElementById('calendar-grid').innerHTML = heads + cols;
+        }
+
+        function drawAccordion() {
+            document.getElementById('accordion').innerHTML = sports.map(s => `
+                <div class="collapse collapse-arrow rounded-none border-b border-base-300">
+                    <input type="checkbox" class="peer" aria-label="${s[0]}" ${s[0] === 'Futebol 11' ? 'checked' : ''} />
+
+                    <div class="collapse-title flex min-h-[50px] items-center gap-2 ps-0 text-[15px] text-[#555555]
+                                peer-checked:text-[#0095D9] peer-checked:[&>span:first-child]:bg-[#0095D9]">
+                        ${ico(s[1])}
+                        <span>${s[0]}</span>
+                    </div>
+
+                    <div class="collapse-content px-0">
+                        <div class="overflow-x-auto rounded-md border border-base-300">
+                            <table class="table min-w-[600px] text-[13px]
+                                          [&_td]:whitespace-nowrap [&_td]:border-b [&_td]:border-r [&_td]:border-base-300
+                                          [&_td:last-child]:border-r-0 [&_tr:last-child_td]:border-b-0">
+                                <tbody>
+                                    ${rows.map(r => `
+                                        <tr>
+                                            ${r.split('|').map((c, i) =>
+                `<td class="${negrito.includes(i) ? 'font-semibold' : ''}">${c}</td>`
+            ).join('')}
+                                        </tr>`).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>`).join('');
+        }
+
+        document.getElementById('prev').addEventListener('click', () => { offset--; drawCalendar(); });
+        document.getElementById('next').addEventListener('click', () => { offset++; drawCalendar(); });
+
+        drawCalendar();
+        drawAccordion();
+    </script>
+</body>
+
+</html>
